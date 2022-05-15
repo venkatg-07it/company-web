@@ -1,0 +1,29 @@
+{
+    "fields": [
+        "S.No.",
+        "Planning Load Day",
+        "PO Type",
+        "Process 1",
+        "Process 2",
+        "Item Code",
+        "Item Description",
+        "RM Code",
+        "RM Description",
+        "Quantity",
+        "BATCH/INDIVIDUAL",
+        "Nesting No.",
+        "FY",
+        "Load Day",
+        "S1 of RM",
+        "Material",
+        "Nesting Number",
+        "Nesting Qty",
+        "Process Qty"              
+    ],
+    "groups": [
+        "nestingMaster"
+    ],
+    "primary": [
+        {"name": "loadDay", "label": "Load Day"}       
+    ]
+}

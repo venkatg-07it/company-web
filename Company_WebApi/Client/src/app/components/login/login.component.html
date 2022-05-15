@@ -1,0 +1,29 @@
+<div class="container-fluid ps-md-0">
+    <div class="row g-0">
+      <div class="d-none d-md-flex col-md-9 col-lg-9" 
+      style="background-image: url(./../../../assets/img/gyro/login-bg.jpg);background-position:center;height:89vh">
+          
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <div class="container" style="margin-top:50px">
+            <h3 style="text-align: center;">Sign In</h3>
+            <div class="row form-group mx-auto">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" id="username" placeholder="User Name" [(ngModel)]="userName">
+            </div>
+            <div class="row form-group mx-auto">
+                <label for="password">Password</label>
+                <input type="email" class="form-control" id="password" placeholder="Password" [(ngModel)]="password">
+            </div>
+            <div class="row form-group mx-auto">
+                <div class="col">
+                    <button class="btn btn-danger" (click)="clear()">Clear</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" (click)="login()">Login</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

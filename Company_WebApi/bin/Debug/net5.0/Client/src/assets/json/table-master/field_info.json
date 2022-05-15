@@ -1,0 +1,13 @@
+{
+    "fields": [
+        "S.No.",
+        "Table",
+        "Scrap %"
+    ],
+    "groups": [
+        "tableMaster"
+    ],
+    "primary": [
+        {"name": "tableType", "label": "Table"}       
+    ]
+}

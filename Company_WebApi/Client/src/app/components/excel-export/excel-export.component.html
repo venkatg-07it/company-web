@@ -1,0 +1,31 @@
+<container-element [ngSwitch]="routePath">
+    <app-ee-item-master *ngSwitchCase="'item-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-item-master>
+    <app-ee-customer-master *ngSwitchCase="'customer-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-customer-master>
+    <app-ee-component-master *ngSwitchCase="'component-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-component-master>
+    <app-ee-assembly-master *ngSwitchCase="'assembly-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-assembly-master>
+    <app-ee-im-raw-mat-master *ngSwitchCase="'im-raw-materials-master-export'" [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl" [pageTitle]="pageTitle"></app-ee-im-raw-mat-master>
+    <app-ee-price-master *ngSwitchCase="'price-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-price-master>
+    <app-ee-po-master *ngSwitchCase="'po-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-po-master>
+    <app-ee-open-po-master *ngSwitchCase="'open-po-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-open-po-master>
+    <app-ee-dummy-po-master *ngSwitchCase="'dummy-po-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-dummy-po-master>
+    <app-ee-table-master *ngSwitchCase="'table-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-table-master>
+    <app-ee-table-master *ngSwitchCase="'nesting-master-export'" [jsonLocation]="jsonLocation" [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"></app-ee-table-master>
+    <app-ee-po-item-code-match *ngSwitchCase="'po-item-code-match-export'" [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl" [pageTitle]="pageTitle"></app-ee-po-item-code-match>
+    <app-ee-bi-master *ngSwitchCase="'batch-or-individual-master-export'" [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl" [pageTitle]="pageTitle"></app-ee-bi-master>
+    <app-ee-ctq-master *ngSwitchCase="'ctq-master-export'" [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl" [pageTitle]="pageTitle"></app-ee-ctq-master>
+
+</container-element>

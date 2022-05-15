@@ -1,0 +1,19 @@
+{
+    "fields": [
+        "S.No.",
+        "Assembly No.",
+        "Assembly No. Description",
+        "Item Code",
+        "Item Code Description",
+        "Qty",
+        "Remarks"
+    ],
+    "groups": [
+        "assemblyMaster"
+    ],
+    "primary": [
+        {"name": "itemcode", "label": "Item Code"},
+        {"name": "assemblyNumber", "label": "Assembly No."},
+        {"name": "qty", "label": "Qty"}
+    ]
+}

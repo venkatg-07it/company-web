@@ -1,0 +1,17 @@
+{
+    "fields": [
+        "S.No.",
+        "Load Day",
+        "Item Code",
+        "Description",
+        "Customer",
+        "Scanned Qty",
+        "Quantity",
+        "Batch/Individual",
+        "Nesting No",
+        "Process No"
+    ],   
+    "repeatedFields": [        
+        "Process"      
+    ]
+}

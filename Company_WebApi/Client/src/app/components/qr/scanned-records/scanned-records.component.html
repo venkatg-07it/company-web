@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <h2>{{pageTitle}}</h2>
+    <div class="d-flex">
+        <div class="p-2 col-md-3">
+            <div class="form-group">
+
+                <input type="text" class="form-control" (dateSelect)="onDateSelect($event)" placeholder="dd-mmm-yyyy"
+                    name="dp" ngbDatepicker #d="ngbDatepicker" [value]="model">
+
+                <div class="input-group-append">
+                    <button id="calender-icon" class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                        type="button">📅</button>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 col-md-1" *ngIf="loadDayDDList.length > 0">
+            <select class="form-control" id="load-day-drop-down" [(ngModel)]="loadDayDropDown">
+                <option *ngFor="let option of loadDayDDList">
+                    {{option}}
+                </option>
+            </select>
+        </div>
+        <div class="p-2 col-md-1">
+            <button class="btn btn-primary" (click)="loadData()">Load</button>
+        </div>
+
+        <div class="ml-auto p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="export()">Export</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%"
+            class="ag-theme-alpine"
+            [rowData]="gridData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            (filterChanged)="onFilterChanged($event)"
+            [frameworkComponents]="frameworkComponents"
+            *ngIf="gridData.length > 0"
+        >
+        </ag-grid-angular>
+    </div>
+
+</div>
+<app-loader *ngIf="showLoader"></app-loader>

@@ -1,0 +1,185 @@
+<div class="container-fluid">
+  <h4>{{pageTitle}}</h4>
+  <div class="alert alert-success" *ngIf="isDataUploaded && isSuccess">
+    <strong>Success.!</strong> Data uploaded successfully
+  </div>
+  <div class="alert alert-danger" *ngIf="isDataUploaded && isFailure">
+    <strong>Error.!</strong> {{errMsg}}
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <input type="text" class="form-control" (dateSelect)="onDateSelect($event)" placeholder="dd-mmm-yyyy" name="dp"
+        ngbDatepicker #d="ngbDatepicker" [value]="model">
+      <div class="input-group-append">
+        <button id="calender-icon" class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+          type="button">📅</button>
+      </div>
+    </div>
+    <div clas="form-group col-md-3" *ngIf="loadDayDDList.length > 0">
+      <select class="form-control" id="load-day-drop-down" [(ngModel)]="loadDayDropDown">
+        <option *ngFor="let option of loadDayDDList">
+          {{option}}
+        </option>
+      </select>
+    
+    </div>
+    <div class="form-group col-md-1" style="margin-top:5px;margin-left: 20px">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" [(ngModel)]="isModify">Modify
+        </label>
+    </div>
+    <div class="form-group col-md-1" style="margin-top:5px;margin-left: 20px">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" [(ngModel)]="isDummy">Dummy
+        </label>
+    </div>
+    <div class="form-group col-md-3">
+      <button class="btn btn-primary" (click)="loadForm()">Load Form</button>
+    </div>  
+  </div>
+  <div class="container-fluid" *ngIf="loadNestingForm && editFormGroup && isModify">
+    <form [formGroup]="editFormGroup" (ngSubmit)="loadEditData()">
+      <div class = "row" *ngFor="let rowField of editformFilterFields">
+        
+        <div class="form-group col" *ngFor="let field of rowField">
+          <div *ngIf="field.type=='text'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable">
+          </div>
+          <div *ngIf="field.type=='number'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="number" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable">
+          </div>
+          <div *ngIf="field.type=='auto'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable" [matAutocomplete]="auto"
+              (keyup)="onKeyup($event, field.name)" >
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getAPIData($event.option.value,field.name)'>
+              <div *ngIf="field.name=='s1ofRm'">
+                <mat-option *ngFor="let option of filterRmSizeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+              <div *ngIf="field.name=='rmcode'">
+                <mat-option *ngFor="let option of filterRmCodeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+              <div *ngIf="field.name=='itemcode'">
+                <mat-option *ngFor="let option of filterItemCodeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+            </mat-autocomplete>
+          </div>   
+          
+
+        </div>
+        <div class="col-md-1">
+          <label> &nbsp;</label>
+          <input type="submit" class="form-control btn btn-primary" value="Load" />
+        </div>
+      </div>
+     
+    </form>
+  </div>
+  <div class="container-fluid" *ngIf="loadNestingForm && formGroup && (!isModify || (isModify && filteredNestingData.length > 0))">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+      <div class = "row" *ngFor="let rowField of formFields">
+        
+        <div [ngClass]="{'form-group col': isModify, 'form-group col-md-4': !isModify}" *ngFor="let field of rowField">
+          <div *ngIf="field.type=='text'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable">
+          </div>
+          <div *ngIf="field.type=='number'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="number" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable">
+          </div>
+          <div *ngIf="field.type=='auto'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="field.disable" [matAutocomplete]="auto"
+              (keyup)="onKeyup($event, field.name)" >
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getAPIData($event.option.value,field.name)'>
+              <div *ngIf="field.name=='s1ofRm'">
+                <mat-option *ngFor="let option of filterRmSizeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+              <div *ngIf="field.name=='rmcode'">
+                <mat-option *ngFor="let option of filterRmCodeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+              <div *ngIf="field.name=='itemcode'">
+                <mat-option *ngFor="let option of filterItemCodeList" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+            </mat-autocomplete>
+          </div>          
+          <div *ngIf="formGroup.get(field.name)?.invalid && (formGroup.get(field.name)?.dirty || formGroup.get(field.name)?.touched)" class="danger">
+            <div *ngIf="formGroup.get(field.name)?.errors?.required" class="form-error-field">
+                {{field.label}} is required.
+            </div>
+            <div *ngIf="formGroup.get(field.name)?.errors?.incorrect" class="form-error-field">
+                {{field.label}} must not be exceeded total Qty 
+            </div>
+            <div *ngIf="formGroup.get(field.name)?.errors?.invalidQty" class="form-error-field">
+              {{formGroup.get(field.name)?.errors?.invalidQty}}
+            </div>
+        </div>
+
+        </div>
+        <div class="col-md-1" *ngIf="isModify">
+          <label> &nbsp;</label>
+          <input type="submit" class="form-control btn btn-primary" value="Add" />
+        </div>
+      </div>
+      <div class="row" *ngIf="!isModify">
+        <div class="form-group col-md-1">
+          <input type="reset" class="btn btn-danger" value="Reset" />
+      </div>
+        <div class="form-group col-md-1">
+            <input type="submit" class="btn btn-primary" value="Add" [disabled]="!formGroup.valid" />
+        </div>
+       
+      </div>
+    </form>
+    
+  </div>
+  
+  <div *ngIf="isModify">
+    <br/>
+  </div>
+
+  <div class="container-fluid" *ngIf="filteredNestingData.length > 0">
+    <ag-grid-angular style="width: 98%; height: 500px;margin-left:1%;" class="ag-theme-alpine" [rowData]="filteredNestingData"
+      [columnDefs]="columnDefs" [defaultColDef]="defaultColDef" [pagination]="true" [paginationPageSize]="10"
+      (gridReady)="onGridReady($event)" [frameworkComponents]="frameworkComponents" >
+    </ag-grid-angular>
+
+    <br/>
+
+    <div class="row">
+      <div class="form-group col-md-1">
+        <button class="btn btn-primary" (click)="submit()" [disabled]="disableSubmit">Submit</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+
+
+
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>

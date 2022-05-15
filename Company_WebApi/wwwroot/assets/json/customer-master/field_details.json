@@ -1,0 +1,81 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "New Customer Code":{
+        "label": "New Customer Code",
+        "name": "newCustomerCode",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 1,
+        "col": 1,
+        "isPrimary": true
+    },
+    "Customer Code":{
+        "label": "Customer Code",
+        "name": "customerCode",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "Customer Name": {
+        "label": "Customer Name",
+        "name": "customerName",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "HSN Code": {
+        "label": "HSN Code",
+        "name": "hsncode",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "GSTIN Number": {
+        "label": "GSTIN Number",
+        "name": "gstinnumber",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "Address": {
+        "label": "Address",
+        "name": "address",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 4,
+        "col": 1
+    },
+    "Payment Terms": {
+        "label": "Payment Terms",
+        "name": "paymentterms",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 3,
+        "col": 2
+    },
+    "Remarks": {
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 200,
+        "group": "customerMaster",
+        "type": "text",
+        "row": 4,
+        "col": 2
+    }
+}

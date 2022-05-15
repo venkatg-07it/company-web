@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <h1>{{pageTitle}}</h1>
+    <div class="alert alert-success" *ngIf="isSuccessAdd">
+      <strong>Success.!</strong> Data added successfully
+    </div>
+    <div class="alert alert-success" *ngIf="isSuccessUpdate">
+      <strong>Success.!</strong> Data updated successfully
+    </div>
+    <div class="alert alert-danger" *ngIf="isFailureAdd">
+      <strong>Error.!</strong> Adding Data
+    </div>
+    <div class="alert alert-danger" *ngIf="isFailureUpdate">
+      <strong>Error.!</strong> Updating Data
+    </div>
+    <div class="row">
+      <div class="form-group col-md-1" style="margin-top:5px;margin-left: 20px">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="isModify">Modify
+        </label>
+      </div>
+      <span *ngFor="let field of editFields">
+        <div class="form-group col" *ngIf="isModify">
+          <input type="text" class="form-control" [placeholder]="field.label" [(ngModel)]="field.value">
+        </div>
+      </span>
+  
+      <div class="form-group col-md-1" *ngIf="isModify">
+        <button type="button" class="btn btn-primary" (click)="loadEditForm()">Edit</button>
+      </div>
+      <div class="form-group col-md-1" *ngIf="!isModify">
+        <button type="button" class="btn btn-primary" (click)="loadAddForm()">Add</button>
+      </div>
+    </div>
+  
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()" *ngIf="formGroup && loadForm">
+      <div class="row" *ngFor="let rowField of formFields">
+  
+        <div class="form-group col" *ngFor="let field of rowField">
+          <div *ngIf="field.type=='text'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="(field.disable || (field.readonly && isModify))">
+          </div>
+          <div *ngIf="field.type=='number'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="number" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="(field.disable || (field.readonly && isModify))">
+          </div>
+
+          <div *ngIf="field.type=='date'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="date" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="(field.disable || (field.readonly && isModify))">
+          </div>
+         
+          <div *ngIf="field.type=='auto'">
+            <label [for]="field.name">{{field.label}}</label>
+            <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label" [name]="field.name"
+              [formControlName]="field.name" [readonly]="(field.disable || (field.readonly && isModify))" [matAutocomplete]="auto"
+              (keyup)="onKeyup($event, field.name)">
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getAPIData($event.option.value,field.name)'>
+              <div *ngIf="field.name == 'customerName'">
+                <mat-option *ngFor="let option of filterCustomerNameList | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+              <div *ngIf="field.name == 'itemcodeforLoading'">
+                <mat-option *ngFor="let option of filterItemCodeList | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </div>
+            </mat-autocomplete>
+          </div>
+          <div
+            *ngIf="formGroup.get(field.name)?.invalid && (formGroup.get(field.name)?.dirty || formGroup.get(field.name)?.touched)"
+            class="danger">
+            <div *ngIf="formGroup.get(field.name)?.errors?.required" class="form-error-field">
+              {{field.label}} is required.
+            </div>
+            <div *ngIf="formGroup.get(field.name)?.errors?.incorrect" class="form-error-field">
+              {{field.label}} must not be exceeded total Qty
+            </div>
+            <div *ngIf="formGroup.get(field.name)?.errors?.invalidQty" class="form-error-field">
+              {{formGroup.get(field.name)?.errors?.invalidQty}}
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+          <input type="reset" class="btn btn-danger" value="Reset" />
+        </div>
+        <div class="col-md-1">
+          <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+      </div>
+    </form>
+  
+  </div>
+  <app-loader *ngIf="showLoader"></app-loader>

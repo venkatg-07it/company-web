@@ -1,0 +1,193 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 100,
+        "pinned": "left"
+    },
+    "Planning Load Day":{
+        "label": "Planning Load Day",
+        "name": "planningLoadDay",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 1        
+    },
+    "PO Type":{
+        "label": "PO Type",
+        "name": "potype",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 2
+    }, 
+    "Process 1":{
+        "label": "Process 1",
+        "name": "process1",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 2
+    }, 
+    "Process 2":{
+        "label": "Process 2",
+        "name": "process2",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 2
+    }, 
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },  
+    "Item Description":{
+        "label": "Item Description",
+        "name": "itemdescription",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },   
+    "RM Code":{
+        "label": "RM Code",
+        "name": "rmcode",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 3
+    },
+    "RM Description":{
+        "label": "RM Description",
+        "name": "rmdescription",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 3
+    },
+    "Quantity":{
+        "label": "Quantity",
+        "name": "qty",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "number",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "BATCH/INDIVIDUAL":{
+        "label": "BATCH/INDIVIDUAL",
+        "name": "batchOrIndividual",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "Nesting No.":{
+        "label": "Nesting No.",
+        "name": "nestingnumber",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "FY":{
+        "label": "FY",
+        "name": "fy",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "Load Day":{
+        "label": "Load Day",
+        "name": "loadDay",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 1        
+    },
+    "S1 of RM":{
+        "label": "S1 of RM",
+        "name": "s1ofRm",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Material":{
+        "label": "Material",
+        "name": "material",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Nesting Number":{
+        "label": "Nesting Number.",
+        "name": "nestingno",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "Nesting Qty":{
+        "label": "Nesting Qty",
+        "name": "nestingQty",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "number",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Process Qty":{
+        "label": "Process Qty",
+        "name": "processQty",
+        "width": 200,
+        "group": "nestingMaster",
+        "type": "number",
+        "required": true,
+        "row": 1,
+        "col": 2
+    }  
+}

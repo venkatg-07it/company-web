@@ -1,0 +1,30 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 100,
+        "pinned": "left"
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "partnumber",
+        "width": 615,        
+        "required": true,
+        "length": 75,
+        "type": "text",
+        "group":"bi",
+        "row": 1,
+        "col": 1     
+    },
+    "BATCH/INDIVIDUAL":{
+        "label": "BATCH/INDIVIDUAL",
+        "name": "iorB",
+        "width": 615,        
+        "type": "text",
+        "required": true,
+        "group":"bi",
+        "length": 1,
+        "row": 1,
+        "col": 2       
+    }   
+}

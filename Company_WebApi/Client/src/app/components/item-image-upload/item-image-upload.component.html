@@ -1,0 +1,18 @@
+<ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%;"
+            class="ag-theme-alpine"
+            [rowData]="filterData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            [frameworkComponents]="frameworkComponents"
+            *ngIf="filterData.length > 0"
+            (actionEvent)="actionEvent()"
+            [context]="context"
+        >
+        </ag-grid-angular>
+<app-loader *ngIf="showLoader"></app-loader>
+
+        

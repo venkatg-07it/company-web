@@ -1,0 +1,101 @@
+{
+    "fields": [
+        "S.No.",
+        "Customer Name",
+        "Customer Code",
+        "PO Number with Revision History",
+        "PO Date",
+        "PO Modified Date",
+        "PO Type",
+        "PO Scanned Image",
+        "HSN Code",
+        "Sale Order No.",
+        "PO Item Code",
+        "Item Code for Loading (75)",
+        "Item Description",
+        "Revision Level",
+        "Unit Cost / Basic Price",
+        "PO Delivery Date",
+        "PO Delivery Qty",
+        "Total Sale Price",
+        "UOM",
+        "SUOM",
+        "Tax Set",
+        "Tax Class",
+        "Full Address",
+        "Realistic Delivery Date",
+        "Comments",
+        "Customer Service Load Day",
+        "Planning Load Day",
+        "Ageing",
+        "S Invoice Date",
+        "Dispatched Qty",
+        "Dispatch-100% or Partial",
+        "COT",
+        "Live/Retired",
+        "Remarks"
+    ],
+    "groups": [
+        "poMaster"
+    ],
+    "primary": [
+        {
+            "name": "ponumber",
+            "label": "PO Number"
+        },
+        {
+            "name": "itemcodeforLoading",
+            "label": "Item Code for Loading (75)"
+        }
+    ],
+    "modelForm": {
+        "fields": [
+            [
+                "Customer Name",
+                "Customer Code",
+                "PO Number with Revision History",
+                "PO Date"
+            ],
+            [
+                "PO Modified Date",
+                "PO Type",
+                "HSN Code",
+                "Sale Order No."
+            ],
+            [
+                "PO Item Code",
+                "Item Code for Loading (75)",
+                "Item Description",
+                "Revision Level"
+            ],
+            [
+                "Unit Cost / Basic Price",
+                "PO Delivery Date",
+                "PO Delivery Qty",
+                "Total Sale Price"
+            ],
+            [
+                "UOM",
+                "SUOM",
+                "Tax Set",
+                "Tax Class",
+                "Full Address"
+            ],
+            [
+                "Customer Service Load Day",
+                "Planning Load Day",
+                "Ageing",
+                "S Invoice Date"
+            ],
+            [
+                "Dispatched Qty",
+                "Dispatch-100% or Partial",
+                "COT",
+                "Live/Retired"
+            ],
+            [
+                "Remarks"
+            ]
+        ]
+    }
+}

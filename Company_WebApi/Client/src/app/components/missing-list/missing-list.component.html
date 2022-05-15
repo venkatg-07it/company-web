@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h3>{{pageTitle}}</h3>    
+
+    <div class="d-flex" >
+        <div class="p-2 flex-grow-1 form-group">
+           
+            
+        </div>     
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="export()">Export</button>
+            </div>
+        </div>
+   </div>
+    
+    <div class="row">
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%"
+            class="ag-theme-alpine"
+            [rowData]="gridData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            (filterChanged)="onFilterChanged($event)"
+            [frameworkComponents]="frameworkComponents"
+        >
+        </ag-grid-angular>
+    </div>
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>

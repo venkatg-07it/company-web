@@ -1,0 +1,322 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Customer Name": {
+        "label": "Customer Name",
+        "name": "customerName",
+        "width": 200,
+        "group": "poMaster",
+        "type": "auto",
+        "row": 1,
+        "col": 1
+    },
+    "Customer Code":{
+        "label": "Customer Code",
+        "name": "customerCode",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "disable": true,
+        "row": 1,
+        "col": 2
+    },
+    "PO Number with Revision History":{
+        "label": "PO Number with Revision History",
+        "name": "ponumber",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 1,
+        "col": 3,
+        "pinned": "left"
+    },
+    "PO Date":{
+        "label": "PO Date",
+        "name": "podate",
+        "width": 200,
+        "group": "poMaster",
+        "type": "date",
+        "required": true,
+        "row": 2,
+        "col": 1
+    },
+    "PO Modified Date": {
+        "label": "PO Modified Date",
+        "name": "pomodifiedDate",
+        "width": 200,
+        "group": "poMaster",
+        "type": "date",
+        "row": 2,
+        "col": 2
+    },
+    "PO Type": {
+        "label": "PO Type",
+        "name": "potype",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "dropdown",
+        "values": ["Fixed", "Fixed-Open"],
+        "row": 2,
+        "col": 3
+    },
+    "PO Scanned Image": {
+        "label": "PO Scanned Image",
+        "name": "poscanedImage",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "HSN Code": {
+        "label": "HSN Code",
+        "name": "hsncode",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "disable": true,
+        "row": 3,
+        "col": 2
+    },
+    "Sale Order No.": {
+        "label": "Sale Order No.",
+        "name": "salesOrderNumber",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 3,
+        "col": 3
+    },
+    "PO Item Code": {
+        "label": "PO Item Code",
+        "name": "poitemcode",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "text",
+        "row": 4,
+        "col": 1        
+    },
+    "Item Code for Loading (75)": {
+        "label": "Item Code for Loading (75)",
+        "name": "itemcodeforLoading",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "auto",
+        "row": 4,
+        "col": 2,
+        "pinned": "left"
+    },
+    "Item Description": {
+        "label": "Item Description",
+        "name": "itemdescription",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 4,
+        "col": 3
+    },
+    "Revision Level":{
+        "label": "Revision Level",
+        "name": "revisionLevel",
+        "width": 200,
+        "group": "poMaster",        
+        "row": 5,
+        "type": "text",
+        "col": 1
+    },
+    "Unit Cost / Basic Price": {
+        "label": "Unit Cost / Basic Price",
+        "name": "unitCostorBasicPrice",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "text",
+        "row": 5,
+        "col": 2
+    },
+    "PO Delivery Date": {
+        "label": "PO Delivery Date",
+        "name": "podeliveryDate",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "date",
+        "row": 5,
+        "col": 3
+    },
+    "PO Delivery Qty": {
+        "label": "PO Delivery Qty",
+        "name": "podeliveryQty",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "number",
+        "row": 6,
+        "col": 1
+    },
+    "Total Sale Price": {
+        "label": "Total Sale Price",
+        "name": "totalSalePrice",
+        "width": 200,
+        "group": "poMaster",
+        "type": "number",
+        "row": 6,
+        "col": 2
+    },
+    "UOM":{
+        "label": "UOM",
+        "name": "uom",
+        "width": 100,
+        "group": "poMaster",        
+        "type": "number",
+        "row": 6,
+        "col": 3
+    },
+    "SUOM":{
+        "label": "SUOM",
+        "name": "suom",
+        "width": 100,
+        "group": "poMaster",        
+        "type": "number",
+        "row": 7,
+        "col": 1
+    },
+    "Tax Set": {
+        "label": "Tax Set",
+        "name": "taxset",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 7,
+        "col": 2
+    },
+    "Tax Class": {
+        "label": "Tax Class",
+        "name": "taxclass",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 7,
+        "col": 3
+    },
+    "Full Address": {
+        "label": "Full Address",
+        "name": "fullAddress",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 8,
+        "col": 1
+    },
+    "Realistic Delivery Date": {
+        "label": "Realistic Delivery Date",
+        "name": "realisticDeliveryDate",
+        "width": 200,
+        "group": "poMaster",        
+        "type": "date",
+        "row": 8,
+        "col": 2
+    },
+    "Comments": {
+        "label": "Comments",
+        "name": "remarks",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 8,
+        "col": 3
+    },
+    "Customer Service Load Day": {
+        "label": "Customer Service Load Day",
+        "name": "customerServiceLoadDay",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "type": "text",
+        "row": 9,
+        "col": 1
+    },
+    "Planning Load Day": {
+        "label": "Planning Load Day",
+        "name": "planningLoadDay",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 9,
+        "col": 2
+    },
+    "Ageing": {
+        "label": "Ageing",
+        "name": "ageing",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 9,
+        "col": 3
+    },
+    "S Invoice Date": {
+        "label": "S Invoice Date",
+        "name": "samrajInvoiceDate",
+        "width": 200,
+        "group": "poMaster",
+        "type": "date",
+        "row": 10,
+        "col": 1
+    },
+    "Dispatched Qty": {
+        "label": "Dispatched Qty",
+        "name": "dispatchedQty",
+        "width": 200,
+        "group": "poMaster",
+        "type": "number",
+        "row": 10,
+        "col": 2
+    },
+    "Dispatch-100% or Partial": {
+        "label": "Dispatch-100% or Partial",
+        "name": "dispatch100PercentorPartial",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 10,
+        "col": 3
+    },
+    "COT": {
+        "label": "COT",
+        "name": "cot",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 11,
+        "col": 1
+    },
+    "Live/Retired": {
+        "label": "Live/Retired",
+        "name": "liveorRetired",
+        "width": 200,
+        "group": "poMaster",
+        "required": true,
+        "length": 1,
+        "type": "text",
+        "row": 11,
+        "col": 2
+    },
+    "Remarks": {
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 200,
+        "group": "poMaster",
+        "type": "text",
+        "row": 11,
+        "col": 3
+    }
+
+    
+}

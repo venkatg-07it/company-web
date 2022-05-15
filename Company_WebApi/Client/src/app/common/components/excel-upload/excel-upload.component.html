@@ -1,0 +1,42 @@
+<div class="container">
+    <div style="margin-left:-20px">
+        <h3>{{pageTitle}}</h3>
+    </div>
+
+    <div class="alert alert-success" *ngIf="isSuccess">
+        <strong>Success.!</strong> Data uploaded successfully
+    </div>
+    
+    <div class="alert alert-danger" *ngIf="disableSubmit">
+        <strong>Error.!</strong> Some of the item code hasn't available in Assembly or Component master. check missing list
+    </div>
+</div>
+
+
+<app-error-message [errMsg]="errMsg" *ngIf="isError"></app-error-message>
+
+<app-file-upload class="col-md-10" 
+    (fileResponse)="fileResponse($event)" 
+    (fileUploaded)="fileUploaded($event)"
+    (modify)="optionModify($event)"
+    [jsonLocation]="jsonLocation"
+    [pageTitle]="pageTitle"
+    (submit)="onSubmit()"
+    [isError]="isError">
+</app-file-upload>
+
+<app-grid 
+    [gridData]="gridData" 
+    [compName]="'PO_FILE_UPLOAD'" 
+    [isFileUploaded]="isFileUploaded"
+    [isModify]="isModify"
+    [jsonLocation]="jsonLocation"
+    (error)="onError($event)"
+    (success)="onSuccess($event)"
+    [isSubmitted]="isSubmitted"
+    [apiUrl]="apiUrl"
+    [pageTitle]="pageTitle"
+    >
+</app-grid>
+
+<app-loader *ngIf="showLoader"></app-loader>

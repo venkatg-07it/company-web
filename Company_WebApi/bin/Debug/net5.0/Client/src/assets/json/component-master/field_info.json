@@ -1,0 +1,19 @@
+{
+    "fields": [
+        "S.No.",
+        "Item Code",
+        "Description",
+        "RM Code",
+        "RM Description",
+        "Size-1",
+        "Size-2",
+        "Size-3",
+        "Remarks"
+    ],
+    "groups": [
+        "componentMaster"
+    ],
+    "primary": [
+        {"name": "itemCode", "label": "Item Code"}
+    ]
+}

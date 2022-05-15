@@ -1,0 +1,33 @@
+{
+    "fields": [
+        "S.No.",
+        "Customer Name",
+        "Customer Code",
+        "PO Number with Revision History",        
+        "PO Date",        
+        "HSN Code",        
+        "PO Item Code",      
+        "Item Code for Loading (75)",  
+        "Item Description",
+        "Revision Level",
+        "Unit Cost / Basic Price",        
+        "PO Delivery Qty",
+        "Total Sale Price",
+        "UOM",
+        "SUOM",
+        "Tax Set",
+        "Tax Class",
+        "Full Address",       
+        "Live/Retired",
+        "Qty Loaded",
+        "Qty Not Loaded",
+        "Remarks"
+    ],
+    "groups": [
+        "openPoMaster"
+    ],
+    "primary": [
+        {"name": "ponumber", "label": "PO Number"},       
+        {"name": "itemcodeforLoading", "label": "Item Code for Loading (75)"}
+    ]
+}

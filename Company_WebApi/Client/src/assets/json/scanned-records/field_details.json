@@ -1,0 +1,74 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Load Day":{
+        "label": "Load Day",
+        "name": "loadDay",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Description":{
+        "label": "Description",
+        "name": "itemdescription",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Customer":{
+        "label": "Customer",
+        "name": "customername",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Scanned Qty":{
+        "label": "Scanned Qty",
+        "name": "position",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Quantity":{
+        "label": "Quantity",
+        "name": "qty",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Batch/Individual":{
+        "label": "Batch/Individual",
+        "name": "batchOrIndividual",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Process No": {
+        "label": "Process No",
+        "name": "processNum",
+        "width": 200,        
+        "type": "text"     
+    },
+    "Nesting No":{
+        "label": "Nesting No",
+        "name": "nestingno",
+        "width": 200,        
+        "type": "text"        
+    },
+    "Repeated Columns": {
+        "fields": {
+            "Process":{
+                "label": "Process",
+                "name": "process",
+                "width": 200,        
+                "type": "text"
+            }
+        },
+        "size": 15
+    }
+    
+}

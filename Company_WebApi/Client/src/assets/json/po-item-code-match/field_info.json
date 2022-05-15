@@ -1,0 +1,13 @@
+{
+    "fields": [
+        "S.No.",
+        "PO ITEM CODE",
+        "LOADING ITEM CODE"
+    ],
+    "groups": [
+        "poItemCodeMatch"
+    ],
+    "primary": [
+        {"name": "poitemcode", "label": "PO ITEM CODE"}       
+    ]
+}

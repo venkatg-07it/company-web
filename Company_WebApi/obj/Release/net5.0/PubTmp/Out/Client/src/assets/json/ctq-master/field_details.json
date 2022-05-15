@@ -1,0 +1,90 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Customer":{
+        "label": "Customer",
+        "name": "customername",
+        "width": 200,        
+        "type": "auto",
+        "required": true
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,        
+        "type": "auto",
+        "required": true
+    },
+    "Process":{
+        "label": "Process",
+        "name": "process",
+        "width": 200,        
+        "type": "text",
+        "required": true
+    },
+    "Description":{
+        "label": "Description",
+        "name": "description",
+        "width": 200,        
+        "type": "text"
+    },
+    "Revision":{
+        "label": "Revision",
+        "name": "revision",
+        "width": 200,        
+        "type": "text"
+    },
+    "Drawing No":{
+        "label": "Drawing No",
+        "name": "drawingNum",
+        "width": 200,        
+        "type": "text"
+    },
+    "Live/Retired":{
+        "label": "Live/Retired",
+        "name": "liveorretired",
+        "width": 200,        
+        "type": "text"
+    },
+    "Drawing Projection":{
+        "label": "Drawing Projection",
+        "name": "drawingprojection",
+        "width": 200,        
+        "type": "text"
+    },
+    "Remarks":{
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 200,        
+        "type": "text"
+    },
+    "Repeated Columns": {
+        "fields": {            
+            "Dim":{
+                "label": "Dim",
+                "name": "dim",
+                "width": 200,        
+                "type": "number"
+            },
+            "Min":{
+                "label": "Min",
+                "name": "min",
+                "width": 200,        
+                "type": "number"
+            },
+            "Max":{
+                "label": "Max",
+                "name": "max",
+                "width": 200,        
+                "type": "number"
+            }
+        },
+        "size": 15
+    }
+    
+    
+}

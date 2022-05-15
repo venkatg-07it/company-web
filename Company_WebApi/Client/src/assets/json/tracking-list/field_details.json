@@ -1,0 +1,108 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 250                
+    },
+    "Item Description":{
+        "label": "Item Description",
+        "name": "description",
+        "width": 250                
+    },
+    "Level Code 1":{
+        "label": "Level Code 1",
+        "name": "lc1",
+        "width": 150                
+    },
+    "Level Code 2":{
+        "label": "Level Code 2",
+        "name": "lc2",
+        "width": 150                
+    },
+    "Qty":{
+        "label": "Qty",
+        "name": "finalQty",
+        "width": 100                
+    },
+    "Process 1":{
+        "label": "Process 1",
+        "name": "process1",
+        "width": 180                
+    },
+    "Process 2":{
+        "label": "Process 2",
+        "name": "process2",
+        "width": 180                
+    },
+    "Process 3":{
+        "label": "Process 3",
+        "name": "process3",
+        "width": 180                
+    },
+    "Process 4":{
+        "label": "Process 4",
+        "name": "process4",
+        "width": 180                
+    },
+    "Process 5":{
+        "label": "Process 5",
+        "name": "process5",
+        "width": 180                
+    },
+    "Process 6":{
+        "label": "Process 6",
+        "name": "process6",
+        "width": 180                
+    },
+    "Process 7":{
+        "label": "Process 7",
+        "name": "process7",
+        "width": 180                
+    },
+    "Process 8":{
+        "label": "Process 8",
+        "name": "process8",
+        "width": 180                
+    },
+    "Process 9":{
+        "label": "Process 9",
+        "name": "process9",
+        "width": 180                
+    },
+    "Process 10":{
+        "label": "Process 10",
+        "name": "process10",
+        "width": 180                
+    },
+    "Process 11":{
+        "label": "Process 11",
+        "name": "process11",
+        "width": 180                
+    },
+    "Process 12":{
+        "label": "Process 12",
+        "name": "process12",
+        "width": 180                
+    },
+    "Process 13":{
+        "label": "Process 13",
+        "name": "process13",
+        "width": 180                
+    },
+    "Process 14":{
+        "label": "Process 14",
+        "name": "process14",
+        "width": 180                
+    },
+    "Process 15":{
+        "label": "Process 15",
+        "name": "process15",
+        "width": 180                
+    }
+}

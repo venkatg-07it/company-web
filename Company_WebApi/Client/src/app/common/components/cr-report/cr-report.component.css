@@ -1,0 +1,6 @@
+.modal {
+    display: block;
+}
+.modal-xl {
+    max-width: 95%;
+}

@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <ag-grid-angular
+            style="width:98%;height:500px;margin-left:1%"
+            class="ag-theme-alpine"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [rowData]="rowData"
+            (gridReady)="onGridReady($event)"
+        >
+
+        </ag-grid-angular>
+    </div>
+</div>

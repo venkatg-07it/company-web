@@ -1,0 +1,113 @@
+<div class="container">    
+    <div class="col-md-9 mx-auto headerForm">
+
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group" style="width: 30%">
+                <input type="text" class="form-control" (dateSelect)="onDateSelect($event)" placeholder="dd-mmm-yyyy"
+                    name="dp" ngbDatepicker #d="ngbDatepicker" [value]="model">
+                <div class="input-group-append">
+                    <button id="calender-icon" class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                        type="button">📅</button>
+                </div>
+
+            </div>
+            <div class="form-group" *ngIf="loadDayDDList.length > 0" style="width: 7%;margin-left: 2%">
+                <select class="form-control" [(ngModel)]="loadDayDropDown">
+                    <option *ngFor="let option of loadDayDDList">
+                        {{option}}
+                    </option>
+
+                </select>
+            </div>
+            <div class="fomr-group" style="width: 15%;margin-left:3%">
+                <button class="btn btn-primary form-control" (click)="loadForm()">Load</button>
+            </div>
+          
+        </div>
+    </div>
+    <div class="col-md-9 mx-auto alert alert-success top-2-percent" *ngIf="success">
+        <strong>Success! </strong>Data added successfully!
+    </div>
+    <div class="col-md-9 mx-auto alert alert-danger top-2-percent" *ngIf="error">
+        <strong>Error! </strong>{{errMsg}}
+    </div>
+    <form class="col-md-9 mx-auto headerForm" [formGroup]="formGroup" (ngSubmit)="addFormData()" *ngIf="formGroup && showForm">
+        <div class="row d-flex justify-content-center">
+            <div class="form-group col-md-3">
+                <label for="itemCode">Item Code</label>
+                <input type="text" class="form-control" id="itemcode" placeholder="Item Code"
+                    formControlName="itemcode"
+                    [matAutocomplete]="auto" (keyup)="onKeyup($event)">
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getAPIData($event.option.value)'>
+                    <mat-option *ngFor="let option of filterItemCodeList" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                
+            </div>
+            <div class="form-group col-md-3">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" placeholder="Quantity" id="quantity"
+                    formControlName="quantity" [readonly]="qtyReadOnly">
+
+
+                <div *ngIf="formGroup.get('quantity')?.invalid && (formGroup.get('quantity')?.dirty || formGroup.get('quantity')?.touched)" class="danger">
+                    <div *ngIf="formGroup.get('quantity')?.errors?.min || formGroup.get('quantity')?.errors?.max" class="form-error-field">
+                        Invalid Count
+                    </div>
+                    <div *ngIf="formGroup.get('quantity')?.errors?.required" class="form-error-field">
+                        Required
+                    </div>                   
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="scannedQuantity">Total Quantity</label>
+                <input type="number" class="form-control" placeholder="Total Quantity" id="totalQuantity"
+                    formControlName="totalQuantity" readonly="true">
+            </div>
+            <div class="form-group col-md-2">
+                <label>&nbsp;&nbsp;</label>
+                <input type="submit" class="btn btn-primary form-control" value="Print" [disabled]="!formGroup.valid" />
+            </div>
+        </div>
+    </form>
+
+
+    <!-- <div class="col-md-9 mx-auto qr-data-table" *ngIf="qrData.length > 0">
+        <table class="table">
+            <thead>
+                <th>S.No</th>
+                <th>Load Day</th>                
+                <th>Item Code</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of qrData">
+                    <td>{{data.sNo}}</td>
+                    <td>{{data.loadday}}</td>                    
+                    <td>{{data.itemcode}}</td>
+                    <td>{{data.quantity}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteQrData(data)"><i
+                                class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-9 mx-auto d-flex" *ngIf="qrData.length > 0">
+        <div class="p-2 flex-grow-1 form-group">
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>

@@ -1,0 +1,137 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Item Code": {
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "Description":{
+        "label": "Description",
+        "name": "description",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "Reference Standard": {
+        "label": "Reference Standard",
+        "name": "referencestandard",
+        "width": 200,
+        "group": "priceMaster",
+        "length": 27,
+        "type": "text",
+        "row": 1,
+        "col": 3
+    },
+    "Equivalent S Item Code": {
+        "label": "Equivalent S Item Code",
+        "name": "equivalentsamrajitemcode",
+        "width": 200,
+        "group": "priceMaster",
+        "length": 75,
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "Customer": {
+        "label": "Customer Name",
+        "name": "customer",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "Customer Code":{
+        "label": "Customer Code",
+        "name": "customerCode",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 2,
+        "col": 3
+    },
+    "HSN Code": {
+        "label": "HSN Code",
+        "name": "hsncode",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "Revision Level":{
+        "label": "Revision Level",
+        "name": "revisionLevel",
+        "width": 200,
+        "group": "priceMaster",
+        "row": 3,
+        "type": "text",
+        "col": 2
+    },
+    "UOM":{
+        "label": "UOM",
+        "name": "uom",
+        "width": 100,
+        "group": "priceMaster",
+        "type": "number",
+        "row": 3,
+        "col": 3
+    },
+    "SUOM":{
+        "label": "SUOM",
+        "name": "suom",
+        "width": 100,
+        "group": "priceMaster",
+        "type": "number",
+        "row": 4,
+        "col": 1
+    },
+    
+    "Basic Price": {
+        "label": "Basic Price",
+        "name": "basicPrice",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 4,
+        "col": 2
+    },
+    "Tax Set": {
+        "label": "Tax Set",
+        "name": "taxset",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 4,
+        "col": 3
+    },
+    "Tax Class": {
+        "label": "Tax Class",
+        "name": "taxclass",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 5,
+        "col": 1
+    },
+    "Full Address": {
+        "label": "Full Address",
+        "name": "fullAddress",
+        "width": 200,
+        "group": "priceMaster",
+        "type": "text",
+        "row": 5,
+        "col": 2
+    }
+}

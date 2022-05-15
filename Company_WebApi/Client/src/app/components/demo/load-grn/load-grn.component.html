@@ -1,0 +1,49 @@
+<div class="container">    
+    <div class="col-md-9 mx-auto headerForm">
+
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" class="form-control" (change)="onLocQRChange($event)" placeholder="Location Number" [(ngModel)]="locQR">
+                
+
+            </div>
+            <div class="form-group" style="margin-left:20px">
+                <label>GRN</label>
+                <input type="text" class="form-control" (change)="onGrnQRChange($event)" placeholder="Location Desc" [(ngModel)]="grnQR">
+            </div>
+            <div class="fomr-group" style="width: 15%;margin-left:3%">
+                <label>&nbsp;&nbsp;</label>
+                <button class="btn btn-primary form-control" (click)="addLoc()">Submit</button>
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="row">
+        Location Number : {{locationData.locnum}}
+    </div>
+
+    <div class="row">
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%;"
+            class="ag-theme-alpine"
+            [rowData]="filterData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            [frameworkComponents]="frameworkComponents"            
+            
+        >
+        </ag-grid-angular>
+        
+    </div>
+
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>
+
+

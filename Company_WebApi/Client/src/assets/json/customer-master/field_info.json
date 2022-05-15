@@ -1,0 +1,19 @@
+{
+    "fields": [
+        "S.No.",
+        "New Customer Code",
+        "Customer Code",
+        "Customer Name",
+        "HSN Code",
+        "GSTIN Number",
+        "Address",
+        "Payment Terms",
+        "Remarks"
+    ],
+    "groups": [
+        "customerMaster"
+    ],
+    "primary": [
+        {"name": "newCustomerCode", "label": "New Customer Code"}
+    ]
+}

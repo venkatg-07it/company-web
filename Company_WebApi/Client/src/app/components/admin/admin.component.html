@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('CustomerMaster')">Customer Master</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('ItemMaster')">Item Master</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('ComponentMaster')">Component Master</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('AssemblyMaster')">Assembly Master</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('RM')">Raw Materials</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('PriceMaster')">Price Master</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('POMaster')">PO Master</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="deleteAll('TableMaster')">Table Master</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-danger" (click)="deleteAll('POItemCodeMatch')">PO Item Code Match</button> <br />
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-danger" (click)="deleteAll('BIMaster')">Batch or Individual</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-danger" (click)="deleteAll('CTQMaster')">CTQ Master</button>
+            </div>
+        </div>
+    </div>
+
+    <app-loader *ngIf="showLoader"></app-loader>
+     
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+

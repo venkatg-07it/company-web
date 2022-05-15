@@ -1,0 +1,10 @@
+#calender-icon {   
+    position: relative;
+    margin-top: -38px;
+    left: 85%;
+    z-index: 100;
+}
+
+.form-error-field {
+    color: red;
+}

@@ -1,0 +1,71 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "GRN Date":{
+        "label": "GRN Date",
+        "name": "grndate",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "date",
+        "row": 1,
+        "col": 1
+    },
+    "PO/MO Number":{
+        "label": "PO/MO Number",
+        "name": "poorMonumber",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "Vendor Name": {
+        "label": "Vendor Name",
+        "name": "vendorname",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "Part Number": {
+        "label": "Part Number",
+        "name": "partnumber",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "Part Desc.": {
+        "label": "Part Desc.",
+        "name": "qty",
+        "width": 200,
+        "group": "partdesc",
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "Recv. Qty": {
+        "label": "Recv. Qty",
+        "name": "recvQty",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "text",
+        "row": 4,
+        "col": 1
+    },
+    "Location": {
+        "label": "Location",
+        "name": "location",
+        "width": 200,
+        "group": "assemblyMaster",
+        "type": "text",
+        "row": 4,
+        "col": 1
+    }
+}

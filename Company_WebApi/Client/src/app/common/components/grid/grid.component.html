@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="d-flex" *ngIf="filterData.length > 0">
+        <div class="p-2 flex-grow-1 form-group" style="margin-left: 1.5%;margin-top: 14px;">
+            <div *ngIf="showCheckBox">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" [(ngModel)]="showMachineColumn"
+                    (change)="onChange()"
+                    >Include Machine Column
+                    </label>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Search" (keyup)="onSearch()" [(ngModel)]="searchText">
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="export()" *ngIf="invalidItems.length > 0">Export</button>
+            </div>
+        </div>
+   </div>
+    <!-- <div class="row" *ngIf="showCheckBox && !isFileUploaded && dataLoaded">
+        <div class="form-group col-md-3" style="margin-top:5px; margin-left: 1.5%">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="showMachineColumn"
+            (change)="onChange()"
+            >Include Machine Column
+            </label>
+        </div>
+    </div> -->
+    <div class="row">
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%;"
+            class="ag-theme-alpine"
+            [rowData]="filterData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            [frameworkComponents]="frameworkComponents"
+            *ngIf="filterData.length > 0"
+        >
+        </ag-grid-angular>
+        
+    </div>    
+    
+    <app-loader *ngIf="isFileUploaded || showLoader"></app-loader>
+  </div>
+
+  
+  

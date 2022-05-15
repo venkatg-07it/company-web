@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img src="./../../../assets/img/gyro/logo.jpg" height="45">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let header of headers">
+        <a class="nav-link">{{header.name}}</a>
+        <div class="nav-sub-menu-1 bg-light" *ngIf="header.data.length > 0">
+          <ul>
+            <li class="nav-item" *ngFor="let subHeader1 of header.data">
+              <a *ngIf="subHeader1.data.length > 0" class="nav-link">{{subHeader1.name}}</a>
+              <a *ngIf="subHeader1.data.length == 0" [routerLink]="'/' + subHeader1.link" class="nav-link">{{subHeader1.name}}</a>
+              <div class="nav-sub-menu-2 bg-light" *ngIf="subHeader1.data.length > 0">
+                <ul>
+                  <li class="nav-item" *ngFor="let subHeader2 of subHeader1.data">
+                    <a *ngIf="subHeader2.data.length > 0">{{subHeader2.name}}</a>
+                    <a *ngIf="subHeader2.data.length == 0" [routerLink]="'/' + subHeader2.link">{{subHeader2.name}}</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+    
+</nav>

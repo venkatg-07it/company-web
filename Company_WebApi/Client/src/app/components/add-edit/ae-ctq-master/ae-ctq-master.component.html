@@ -1,0 +1,128 @@
+<div class="col-md-10 mx-auto headerForm">
+    <h2>{{pageTitle}}</h2>
+    <div class="mx-auto alert alert-success top-2-percent" *ngIf="success">
+        <strong>Success! </strong>{{successMsg}}
+    </div>
+    <div class="mx-auto alert alert-danger top-2-percent" *ngIf="error">
+        <strong>Error! </strong>{{errMsg}}
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-1" style="margin-top:5px;margin-left: 20px">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="isModify">Modify
+            </label>
+        </div>
+        <span *ngFor="let field of editFields">
+            <div class="form-group col" *ngIf="isModify" >
+                <input type="text" class="form-control" [placeholder]="field.label" [(ngModel)]="field.value">
+            </div>
+        </span>
+        
+        <div class="form-group col-md-1" *ngIf="isModify">
+            <button type="button" class="btn btn-primary" (click)="loadEditForm()">Edit</button>
+        </div>
+        <div class="form-group col-md-1" *ngIf="!isModify">
+            <button type="button" class="btn btn-primary" (click)="loadAddForm()">Add</button>
+        </div>
+    </div>
+
+    <form [formGroup]="formGroup" *ngIf="formGroup && showForm" (ngSubmit)="submit()" (ngReset)="reset()">
+        <div class="row d-flex justify-content-center" *ngFor="let colFields of formFields">
+            <div class="form-group col" *ngFor="let field of colFields">
+                <label [for]="field.name">{{field.label}}</label>
+                <input *ngIf="field.type=='text'" type="text" class="form-control" [placeholder]="field.label"
+                    [id]="field.name" [formControlName]="field.name">
+
+                <div *ngIf="field.type=='auto'">
+                    <input type="text" class="form-control" [id]="field.name" [placeholder]="field.label"
+                        [name]="field.name" [formControlName]="field.name" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete"
+                        (optionSelected)='getAPIData($event.option.value,field.name)'>
+                        <div *ngIf="field.name == 'customername'">
+                            <mat-option *ngFor="let option of filterCustomerNameList | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </div>
+                        <div *ngIf="field.name == 'itemcode'">
+                            <mat-option *ngFor="let option of filterItemCodeList | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </div>
+                    </mat-autocomplete>
+                </div>
+                <div *ngIf="formGroup.get(field.name)?.invalid && (formGroup.get(field.name)?.dirty || formGroup.get(field.name)?.touched)"
+                    class="danger">
+                    <div *ngIf="formGroup.get(field.name)?.errors?.required" class="form-error-field">
+                        Required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form [formGroup]="repeatedFormGroup" *ngIf="repeatedFormGroup" (ngSubmit)="addRepeatedFieldData()">
+            <div class="row d-flex justify-content-center">
+                <div class="form-group col" *ngFor="let field of repeatedFields">
+                    <label [for]="field.name">{{field.label}}</label>
+                    <input *ngIf="field.type=='text'" type="text" class="form-control" [placeholder]="field.label"
+                        [id]="field.name" [formControlName]="field.name">
+                    <input *ngIf="field.type=='number'" type="number" class="form-control" [placeholder]="field.label"
+                        [id]="field.name" [formControlName]="field.name">
+                    <div *ngIf="repeatedFormGroup.get(field.name)?.invalid && (repeatedFormGroup.get(field.name)?.dirty || repeatedFormGroup.get(field.name)?.touched)"
+                        class="danger">
+                        <div *ngIf="repeatedFormGroup.get(field.name)?.errors?.required" class="form-error-field">
+                            Required.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>&nbsp;</label>
+                    <input type="submit" class="btn btn-primary form-control" value="Add"
+                        [disabled]="!repeatedFormGroup.valid">
+                </div>
+
+            </div>
+        </form>
+
+        <div class="mx-auto qr-data-table" *ngIf="repeatedFieldData.length > 0">
+            <table class="table">
+                <thead>
+                    <th>S.No</th>
+                    <th *ngFor="let field of repeatedFields">
+                        {{field.label}}
+                    </th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let fieldData of repeatedFieldData">
+                        <td>{{fieldData.sNo}}</td>                        
+                        <td>{{fieldData.dim}}</td>
+                        <td>{{fieldData.min}}</td>
+                        <td>{{fieldData.max}}</td>
+                        <td><button class="btn btn-primary" (click)="editRepeatedFormData(fieldData)"><i class="fas fa-edit"></i></button></td>
+                        <td><button class="btn btn-danger" (click)="delRepeatedFormData(fieldData.sNo)"><i class="fas fa-trash"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex">
+            <div class="p-2 flex-grow-1 form-group">
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <input type="reset" class="btn btn-danger" value="Reset">
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Submit"
+                        [disabled]="!formGroup.valid || repeatedFieldData.length == 0">
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>

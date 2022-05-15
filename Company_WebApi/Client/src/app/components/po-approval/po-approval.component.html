@@ -1,0 +1,127 @@
+<div class="container-fluid">
+    <h4>{{pageTitle}}</h4>
+    <div class="row">
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%;"
+            class="ag-theme-alpine"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            [frameworkComponents]="frameworkComponents"
+            (filterChanged)="onFilterChanged($event)"
+            [rowSelection]="rowSelection"       
+        >
+        </ag-grid-angular>
+</div>
+<div class="d-flex" >
+    <div class="p-2 flex-grow-1 form-group" style="margin-left: 1.5%;margin-top: 14px;">            
+        
+    </div>
+    <div class="p-2">
+        <div class="form-group">
+            <h2>Total Sales Price</h2>
+        </div>
+    </div>
+    <div class="p-2">
+        <div class="form-group">
+            <h2>{{totalPrice | currency:'INR'}}</h2>
+        </div>
+    </div>
+</div>
+<div class="d-flex">
+    <div class="p-2 flex-grow-1 form-group">
+        <label>Comments</label>
+        <input type="text" class="form-control" placeholder="comments" [(ngModel)]="comments"/>
+        <div class="form-error-field" *ngIf="commentsRequired">
+            Required
+        </div>
+    </div>
+    
+</div>
+<div class="d-flex">
+    <div class="p-2 flex-grow-1 form-group">        
+    </div>
+    <div class="p-2">
+        <div class="form-group">
+            <button class="btn btn-danger" (click)="reject()">Reject</button>
+        </div>
+    </div>
+    <div class="p-2">
+        <div class="form-group">
+            <button class="btn btn-primary" (click)="approve()">Approve</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="model" *ngIf="showModel">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">PO Image</h4>
+          <button type="button" class="close" (click)="closePopup()">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6" style="height: 500px; width:100%; overflow: scroll;">
+                    <table class="table" *ngFor="let tableItem of modelItem">
+                        <thead>
+                            <th *ngFor="let header of tableItem.headers">
+                                {{header}}
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let valueList of tableItem.values">
+                                <td *ngFor="let value of valueList">
+                                    {{value}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="pdf-container">
+                        <pdf-viewer [src]="src" [rotation]="0" [original-size]="false" [show-all]="true"
+                            [fit-to-page]="false" [zoom]="1" [zoom-scale]="'page-width'" [stick-to-page]="false"
+                            [render-text]="true" [external-link-target]="'blank'" [autoresize]="true"
+                            [show-borders]="false" style="height: 500px; width:100%;"
+                            (after-load-complete)="afterPdfLoad()"></pdf-viewer>
+                    </div>
+                </div>
+            </div>
+            <div class="pdf-container">
+                <pdf-viewer
+                  [src]="src"
+                  [rotation]="0"
+                  [original-size]="false"
+                  [show-all]="true"
+                  [fit-to-page]="false"
+                  [zoom]="1"
+                  [zoom-scale]="'page-width'"
+                  [stick-to-page]="false"
+                  [render-text]="true"
+                  [external-link-target]="'blank'"
+                  [autoresize]="true"
+                  [show-borders]="false"
+                  style="height: 500px; width:100%;"
+                  (after-load-complete) = "afterPdfLoad()"
+                ></pdf-viewer>
+              </div>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+<app-loader *ngIf="showLoader"></app-loader>

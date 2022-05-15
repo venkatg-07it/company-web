@@ -1,0 +1,399 @@
+{
+    "load-day": {
+        "title": "LOAD DAY LIST",
+        "fields": {
+            "S.No.": {
+                "label": "S.No.",
+                "name": "sNo",
+                "width": 100,
+                "pinned": "left"
+            },           
+            "Item Code":{
+                "label": "Item Code",
+                "name": "itemcodeforLoading",
+                "width": 450                
+            },
+            "Item Description":{
+                "label": "Item Description",
+                "name": "itemdescription",
+                "width": 450                
+            },
+            "Required Qty":{
+                "label": "Required Qty",
+                "name": "deliveryQty",
+                "width": 280                
+            }
+        }
+    },    
+    "component-list": {
+        "title": "COMPONENT LIST",
+        "fields": {
+            "Item Code":{
+                "label": "Item Code",
+                "name": "itemcode",
+                "width": 250                
+            },
+            "Item Description":{
+                "label": "Item Description",
+                "name": "description",
+                "width": 250                
+            },
+            "RM Code":{
+                "label": "RM Code",
+                "name": "rmCode",
+                "width": 250                
+            },
+            "RM Description":{
+                "label": "RM Description",
+                "name": "rmDescription",
+                "width": 250                
+            },
+            "Level Code 1":{
+                "label": "Level Code 1",
+                "name": "lc1",
+                "width": 180                
+            },
+            "Level Code 2":{
+                "label": "Level Code 2",
+                "name": "lc2",
+                "width": 180                
+            },
+            "Size 1":{
+                "label": "Size 1",
+                "name": "size1",
+                "width": 100                
+            },
+            "Size 2":{
+                "label": "Size 2",
+                "name": "size2",
+                "width": 100                
+            },
+            "Size 3":{
+                "label": "Size 3",
+                "name": "size3",
+                "width": 100                
+            },
+            "Qty":{
+                "label": "Qty",
+                "name": "finalQty",
+                "width": 100                
+            },
+            "Process 1":{
+                "label": "Process 1",
+                "name": "process1",
+                "width": 180                
+            },
+            "Process 2":{
+                "label": "Process 2",
+                "name": "process2",
+                "width": 180                
+            },
+            "Process 3":{
+                "label": "Process 3",
+                "name": "process3",
+                "width": 180                
+            },
+            "Process 4":{
+                "label": "Process 4",
+                "name": "process4",
+                "width": 180                
+            },
+            "Process 5":{
+                "label": "Process 5",
+                "name": "process5",
+                "width": 180                
+            },
+            "Process 6":{
+                "label": "Process 6",
+                "name": "process6",
+                "width": 180                
+            },
+            "Process 7":{
+                "label": "Process 7",
+                "name": "process7",
+                "width": 180                
+            },
+            "Process 8":{
+                "label": "Process 8",
+                "name": "process8",
+                "width": 180                
+            },
+            "Process 9":{
+                "label": "Process 9",
+                "name": "process9",
+                "width": 180                
+            },
+            "Process 10":{
+                "label": "Process 10",
+                "name": "process10",
+                "width": 180                
+            },
+            "Process 11":{
+                "label": "Process 11",
+                "name": "process11",
+                "width": 180                
+            },
+            "Process 12":{
+                "label": "Process 12",
+                "name": "process12",
+                "width": 180                
+            },
+            "Process 13":{
+                "label": "Process 13",
+                "name": "process13",
+                "width": 180                
+            },
+            "Process 14":{
+                "label": "Process 14",
+                "name": "process14",
+                "width": 180                
+            },
+            "Process 15":{
+                "label": "Process 15",
+                "name": "process15",
+                "width": 180                
+            },
+            "FINISH TYPE":{
+                "label": "FINISH TYPE",
+                "name": "finishtype",
+                "width": 180                
+            },
+            "SURFACE PREPARATION":{
+                "label": "SURFACE PREPARATION",
+                "name": "surfacepreparation",
+                "width": 230                
+            },
+            "PRIME COLOUR":{
+                "label": "PRIME COLOUR",
+                "name": "primercolour",
+                "width": 230                
+            },
+            "PRIME DFT":{
+                "label": "PRIME DFT",
+                "name": "primerDft",
+                "width": 230                
+            },
+            "IMO COLOUR":{
+                "label": "IMO COLOUR",
+                "name": "imocolour",
+                "width": 230                
+            },
+            "IMO DFT":{
+                "label": "IMO DFT",
+                "name": "imodft",
+                "width": 230                
+            },
+            "TOP COAT COLOUR":{
+                "label": "TOP COAT COLOUR",
+                "name": "topCoatColour",
+                "width": 230                
+            },
+            "TOP COAT DFT":{
+                "label": "TOP COAT DFT",
+                "name": "topCoatDft",
+                "width": 230                
+            },
+            "REMARKS":{
+                "label": "REMARKS",
+                "name": "remarks",
+                "width": 230                
+            }        
+        }
+    },
+    "raw-materials": {
+        "title": "CONSOLIDATION REPORT-RM",
+        "fields": {
+            "RM Code":{
+                "label": "RM Code",
+                "name": "rmCode",
+                "width": 250                
+            },
+            "RM Description":{
+                "label": "RM Description",
+                "name": "rmDescription",
+                "width": 250                
+            },            
+            "Size 1":{
+                "label": "Size 1",
+                "name": "size1",
+                "width": 100                
+            },
+            "Size 2":{
+                "label": "Size 2",
+                "name": "size2",
+                "width": 100                
+            },
+            "Size 3":{
+                "label": "Size 3",
+                "name": "size3",
+                "width": 100                
+            },
+            "Table":{
+                "label": "Table",
+                "name": "tables",
+                "width": 100                
+            },
+            "Scrap %":{
+                "label": "Scrap %",
+                "name": "scrapPercent",
+                "width": 120                
+            },
+            "Qty":{
+                "label": "Qty",
+                "name": "qty",
+                "width": 100                
+            },
+            "SUOM":{
+                "label": "SUOM",
+                "name": "suom",
+                "width": 100                
+            },
+            "SIZE 2 * SIZE 3/1000000 FOR TABLE 1 or SIZE 3/1000 FOR OTHER TABLE":{
+                "label": "SIZE 2 * SIZE 3/1000000 FOR TABLE 1 or SIZE 3/1000 FOR OTHER TABLE",
+                "name": "table1OrTable2",
+                "width": 230                
+            },
+            "ADD 12%":{
+                "label": "ADD 12%",
+                "name": "addPercent",
+                "width": 130                
+            },
+            "TOTAL":{
+                "label": "TOTAL",
+                "name": "total",
+                "width": 130                
+            },
+            "TOTAL*QTY":{
+                "label": "TOTAL*QTY",
+                "name": "totalwithQty",
+                "width": 130                
+            },
+            "RM S2":{
+                "label": "RM S2",
+                "name": "rmS2",
+                "width": 100                
+            },
+            "RM S3":{
+                "label": "RM S3",
+                "name": "rmS3",
+                "width": 100                
+            },
+            "Sq-m for Table 1 m for Table 2":{
+                "label": "Sq-m for Table 1 m for Table 2",
+                "name": "inMetres",
+                "width": 230                
+            },
+            "Table 1: NO. OF SHEETS REQUIRED in no.s, Table 2:LENGH REQUIRED in m":{
+                "label": "Table 1: NO. OF SHEETS REQUIRED in no.s, Table 2:LENGH REQUIRED in m",
+                "name": "numberOfSheetsOrLengthRequired",
+                "width": 230                
+            }
+        }
+    },
+    "store-table-1": {
+        "title": "STORE REPORT TABLE 1",
+        "fields": {
+            "RM Code":{
+                "label": "RM Code",
+                "name": "rmCode",
+                "width": 250                
+            },
+            "RM Description":{
+                "label": "RM Description",
+                "name": "rmDescription",
+                "width": 250                
+            },            
+            "Size 1":{
+                "label": "Size 1",
+                "name": "size1",
+                "width": 100                
+            },
+            "Size 2":{
+                "label": "Size 2",
+                "name": "size2",
+                "width": 100                
+            },
+            "Size 3":{
+                "label": "Size 3",
+                "name": "size3",
+                "width": 100                
+            },
+            "Table":{
+                "label": "Table",
+                "name": "tables",
+                "width": 100                
+            },
+            "NO. OF SHEETS REQUIRED in no.s":{
+                "label": "NO. OF SHEETS REQUIRED in no.s",
+                "name": "numberOfSheetsRequiredinNumbers",
+                "width": 200                
+            },
+            "NO. OF SHEETS REQUIRED in no.s as per Nesting":{
+                "label": "NO. OF SHEETS REQUIRED in no.s as per Nesting",
+                "name": "numberOfSheetsPerNesting",
+                "width": 230                
+            },
+            "NO.OF SHEETS ISSUED":{
+                "label": "NO.OF SHEETS ISSUED",
+                "name": "numberOfSheetsIssued",
+                "width": 200                
+            },
+            "REMARKS":{
+                "label": "REMARKS",
+                "name": "remarks",
+                "width": 180                
+            }
+        }
+    },
+    "store-table-2": {
+        "title": "STORE REPORT TABLE 2",
+        "fields": {
+            "RM Code":{
+                "label": "RM Code",
+                "name": "rmCode",
+                "width": 250                
+            },
+            "RM Description":{
+                "label": "RM Description",
+                "name": "rmDescription",
+                "width": 250                
+            },            
+            "Size 1":{
+                "label": "Size 1",
+                "name": "size1",
+                "width": 100                
+            },
+            "Size 2":{
+                "label": "Size 2",
+                "name": "size2",
+                "width": 100                
+            },
+            "Size 3":{
+                "label": "Size 3",
+                "name": "size3",
+                "width": 100                
+            },
+            "Table":{
+                "label": "Table",
+                "name": "tables",
+                "width": 100                
+            },
+            "LENGH REQUIRED in m":{
+                "label": "LENGH REQUIRED in m",
+                "name": "lengthRequiredinMetre",
+                "width": 200                
+            },            
+            "Actual Length Required in m":{
+                "label": "Actual Length Required in m",
+                "name": "numberOfSheetsIssued",
+                "width": 200                
+            },
+            "REMARKS":{
+                "label": "REMARKS",
+                "name": "remarks",
+                "width": 180                
+            }
+        }
+    }   
+    
+}

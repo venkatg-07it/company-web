@@ -1,0 +1,25 @@
+{
+    "fields": [
+        "S.No.",
+        "Item Code",
+        "Description",
+        "Reference Standard",
+        "Equivalent S Item Code",
+        "Customer",
+        "Customer Code",
+        "HSN Code",
+        "Revision Level",
+        "UOM",
+        "SUOM",
+        "Basic Price",
+        "Tax Set",
+        "Tax Class",
+        "Full Address"
+    ],
+    "groups": [
+        "priceMaster"
+    ],
+    "primary": [
+        {"name": "itemcode", "label": "Item Code"}
+    ]
+}

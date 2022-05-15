@@ -1,0 +1,63 @@
+<container-element [ngSwitch]="routePath">
+    <app-item-master *ngSwitchCase="'item-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-item-master>
+    <app-customer-master *ngSwitchCase="'customer-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-customer-master>
+    <app-component-master *ngSwitchCase="'component-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-component-master>
+    <app-assembly-master *ngSwitchCase="'assembly-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-assembly-master>
+    <app-im-raw-mat-master *ngSwitchCase="'im-raw-materials-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-im-raw-mat-master>
+    <app-price-master *ngSwitchCase="'price-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-price-master>
+    <app-po-master *ngSwitchCase="'po-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-po-master>
+    <app-open-po-master *ngSwitchCase="'open-po-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-open-po-master>
+    <app-dummy-po-master *ngSwitchCase="'dummy-po-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-dummy-po-master>
+    <app-po-item-code-match *ngSwitchCase="'po-item-code-match-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-po-item-code-match>
+    <app-bi-master *ngSwitchCase="'batch-or-individual-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-bi-master>
+    <app-ctq-master *ngSwitchCase="'ctq-master-upload'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ctq-master>
+    
+</container-element>

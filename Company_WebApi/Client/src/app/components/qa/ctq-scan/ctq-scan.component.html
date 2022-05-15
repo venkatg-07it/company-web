@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="alert" [ngClass]="{'alert-success': type=='success', 'alert-danger': type=='fail'}" *ngIf="showAlert">
+        <strong>{{alertTitle}}</strong> {{alertMsg}}
+    </div>
+    <div class="row">
+        <div class="col-md-3 form-group">
+            <input #scanQr type="text" class="form-control" placeholder="Place Cursor" (change)="scanQR($event)" [(ngModel)]="scanText" />
+        </div>
+    </div>
+    <div *ngIf="showScannedQRForm">
+        <div class="d-flex">
+            <div class="p-2 flex-grow-1 form-group">
+                <div class="col-md-3">
+                    <label [for]="process">Select Process</label>
+                    <select class="form-control" id="process" name="process" (change)="onProcessChange($event)">
+                        <option value="Select Process">Select Process</option>
+                        <option *ngFor="let option of processList" [value]="option">{{option}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-2 form-group">
+                <label>{{qtyText}}</label>
+            </div>
+        </div>       
+        <br/>
+        <table class="table" *ngFor="let gridItem of grid1Data">
+            <thead>
+                <th *ngFor="let header of gridItem.header">{{header}}</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td *ngFor="let value of gridItem.values">{{value}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <table class="table" *ngIf="ctqData.length > 0">
+            <thead>
+                <th>S.No</th>
+                <th>Process</th>
+                <th>Dim</th>
+                <th>Min</th>
+                <th>Specified Min</th>
+                <th>Max</th>
+                <th>Specified Max</th>
+                <th>Observed</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of ctqData">
+                    <td>{{item.sNo}}</td>
+                    <td>{{item.process}}</td>
+                    <td>{{item.dim}}</td>
+                    <td>{{item.min}}</td>
+                    <td>{{item.specifiedmin}}</td>
+                    <td>{{item.max}}</td>
+                    <td>{{item.specifiedmax}}</td>
+                    <td><input type="text" class="form-control" placeholder="Observed" 
+                        (change)="onChangeObservedValue($event, item.sNo)"></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" class="form-control" placeholder="Comments" (change)="onCommentsChange($event)"/>
+            </div>
+            <div class="form-error-field" *ngIf="commentsRequired">
+                Required.
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto d-flex" *ngIf="showScannedQRForm">
+        <div class="p-2 flex-grow-1 form-group">
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-danger" (click)="submit('Rework')">Rework</button>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-danger" (click)="submit('Rejected')">Reject</button>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="submit('Approved')">Approve</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<app-loader *ngIf="showLoader"></app-loader>

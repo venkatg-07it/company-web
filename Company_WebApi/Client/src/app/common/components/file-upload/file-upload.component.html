@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-group col-md-1" style="margin-top:5px; margin-left: 3%">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="isModify">Modify
+            </label>
+        </div>
+        <div class="form-group custom-file mb-3 col-md-8">
+            <input type="file" class="custom-file-input" id="customFile" name="filename" (change)="selectFile($event)"
+            accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" >
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        <div class="form-group col-md-1">
+            <button type="button" class="btn btn-primary" (click)="downloadTemplate()" >Download</button>
+        </div>
+        <div class="form-group col-md-1">
+            <button type="button" class="btn btn-primary" (click)="onSubmit()" [disabled]="disableSubmit || isError">Submit</button>
+        </div>
+    </div>
+</div>

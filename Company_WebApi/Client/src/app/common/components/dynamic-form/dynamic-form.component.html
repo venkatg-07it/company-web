@@ -1,0 +1,81 @@
+
+<div class="container-fluid">
+    <h1>{{pageTitle}}</h1>
+    <div class="alert alert-success" *ngIf="isSuccessAdd">
+        <strong>Success.!</strong> Data added successfully
+    </div>
+    <div class="alert alert-success" *ngIf="isSuccessUpdate">
+        <strong>Success.!</strong> Data updated successfully
+    </div>
+    <div class="alert alert-danger" *ngIf="isFailureAdd">
+        <strong>Error.!</strong> Adding Data
+    </div>
+    <div class="alert alert-danger" *ngIf="isFailureUpdate">
+        <strong>Error.!</strong> Updating Data
+    </div>
+    <div class="row">
+        <div class="form-group col-md-1" style="margin-top:5px;margin-left: 20px">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="isModify">Modify
+            </label>
+        </div>
+        <span *ngFor="let field of editFields">
+            <div class="form-group col" *ngIf="isModify" >
+                <input type="text" class="form-control" [placeholder]="field.label" [(ngModel)]="field.value">
+            </div>
+        </span>
+        
+        <div class="form-group col-md-1" *ngIf="isModify">
+            <button type="button" class="btn btn-primary" (click)="loadEditForm()">Edit</button>
+        </div>
+        <div class="form-group col-md-1" *ngIf="!isModify">
+            <button type="button" class="btn btn-primary" (click)="loadAddForm()">Add</button>
+        </div>
+    </div>
+    <div *ngIf="loadForm">
+        <form *ngFor="let form of formNames" [formGroup]="formGroups[form]" >
+            <h4>{{formGroupDisplayName[form]}}</h4>
+            <div class="row" *ngFor="let rowId of groupInfo[form].rowIds">
+                <div class="form-group col" *ngFor="let column of groupInfo[form].rowInfo[rowId]">
+                    <div *ngIf="column.type=='text'">
+                        <label [for]="column.name">{{column.label}}</label>
+                        <input type="text" class="form-control" [id]="column.name" 
+                        [placeholder]="column.label" [name]="column.name" [formControlName]="column.name"
+                        [readonly]="column.isPrimary && isModify">
+                    </div>
+                    <div *ngIf="column.type=='number'">
+                        <label [for]="column.name">{{column.label}}</label>
+                        <input type="number" class="form-control" [id]="column.name" 
+                        [placeholder]="column.label" [name]="column.name" [formControlName]="column.name">
+                    </div>
+                    <div *ngIf="column.type=='date'">
+                        <label [for]="column.name">{{column.label}}</label>
+                        <input type="date" class="form-control" [id]="column.name" 
+                        [placeholder]="column.label" [name]="column.name" [formControlName]="column.name">
+                    </div>
+                    
+                    <div *ngIf="formGroups[form].get(column.name)?.invalid && (formGroups[form].get(column.name)?.dirty || formGroups[form].get(column.name)?.touched)" class="danger">
+                        <div *ngIf="formGroups[form].get(column.name)?.errors?.required" class="form-error-field">
+                            {{column.label}} is required.
+                        </div>
+                        <div *ngIf="formGroups[form].get(column.name)?.errors?.maxlength" class="form-error-field">
+                            {{column.label}} must not be exceeded {{column.length}} characters long
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="form-error-field" *ngIf="isItemMasterFinishTypeIssue">
+                Need to give any one of the finish operation values<br/>
+            </div>
+            <div class="form-error-field" *ngIf="!isRemarksChanged && isFormUpdated">
+                Remarks should be updated<br/>
+            </div>
+            <div class="form-error-field" *ngIf="!isFormUpdated">
+                Should update atlease one field in the form<br/>
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button> 
+    </div>
+</div>
+<app-loader *ngIf="showLoader"></app-loader>

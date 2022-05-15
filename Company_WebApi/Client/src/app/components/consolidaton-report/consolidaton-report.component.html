@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <h4>{{pageTitle}}</h4>
+    <div class="row">
+      
+    <div class="form-group col-md-3">
+    
+        <input type="text" class="form-control" 
+        (dateSelect)="onDateSelect($event)"
+        placeholder="dd-mmm-yyyy" name="dp" ngbDatepicker #d="ngbDatepicker"
+        [value]="model"
+        >
+        
+        <div class="input-group-append">
+          <button id="calender-icon" class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">📅</button>
+        </div>
+        <!-- <input type="date" class="form-control" [(ngModel)]="model" placeholder="dd-mm-yyyy" defaultValue="2014-02-09"/> -->
+    
+      </div>
+      <div clas="form-group col-md-3" *ngIf="loadDayDDList.length > 0">        
+        <select class="form-control" id="load-day-drop-down" [(ngModel)]="loadDayDropDown">
+          <option *ngFor="let option of loadDayDDList">
+            {{option}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group col-md-1">
+        <button class="btn btn-primary" (click)="generateReport()">Generate</button>
+    </div>
+    <div class="form-group col-md-2">
+      <button class="btn btn-primary" (click)="exportAll()" *ngIf="tabs.length > 0">Export All</button>
+  </div>
+</div>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" *ngIf="tabs.length > 1">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#load-day">Load Day</a>
+      </li>
+      <li class="nav-item" *ngIf="!isDummyPoMaster">
+        <a class="nav-link" data-toggle="tab" href="#summary">Summary</a>
+      </li>
+      <li class="nav-item" *ngIf="!isDummyPoMaster">
+        <a class="nav-link" data-toggle="tab" href="#process-list">Process List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#component-list">Component List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#raw-materials">Raw Materials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#store-table-1">Store Report Table 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#store-table-2">Store Report Table 2</a>
+      </li>
+      <li class="nav-item" *ngIf="!isDummyPoMaster">
+        <a class="nav-link" data-toggle="tab" href="#bought-out-report">Bought out Report</a>
+      </li>
+      <li class="nav-item" *ngIf="!isDummyPoMaster">
+        <a class="nav-link" data-toggle="tab" href="#dummy-po-adjust">Dummy PO Adjust</a>
+      </li>
+    </ul>
+    <ul class="nav nav-tabs" *ngIf="tabs.length == 1">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#ctq-checklist">CTQ Check List</a>
+      </li>
+      
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content" *ngIf="tabs.length > 0">
+      <div *ngFor="let tab of tabs" [id]="tab.name" class="container-fluid tab-pane" [class.active]="tab.index == 0">
+        <br>
+        <app-cr-report 
+        [reportName]="tab.name" 
+        [title]="tab.title" 
+        [data]="tab.data"
+        [fieldInfo]="tab.fieldInfo"
+        [fieldDetails]="tab.fieldDetails"
+        (loader)="onLoad($event)"
+        ></app-cr-report>
+      </div>
+    </div>
+    
+  </div>
+  <app-loader *ngIf="showLoader"></app-loader>

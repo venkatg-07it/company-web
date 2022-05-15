@@ -1,0 +1,37 @@
+{
+    "fields": [
+        "S.No.",
+        "Customer Name",
+        "Customer Code",            
+        "Item Code for Loading (75)",  
+        "Item Description",
+        "Revision Level",        
+        "Delivery Qty",        
+        "UOM",
+        "SUOM",        
+        "Customer Service Load Day",
+        "Planning Load Day",
+        "Ageing",        
+        "Live/Retired",
+        "Status",
+        "Reason for Loading",
+        "Adjusted in PO Load day-1",
+        "Load day 1 Qty",
+        "Adjusted in PO Load day-2",
+        "Load day 2 Qty",
+        "Adjusted in PO Load day-3",
+        "Load day 3 Qty",
+        "Adjusted in PO Load day-4",
+        "Load day 4 Qty",
+        "Adjusted in PO Load day-5",
+        "Load day 5 Qty",
+        "Remarks"
+    ],
+    "groups": [
+        "poMaster"
+    ],
+    "primary": [
+        {"name": "customerServiceLoadDay", "label": "Customer Service Load Day"},       
+        {"name": "itemcodeforLoading", "label": "Item Code for Loading (75)"}
+    ]
+}

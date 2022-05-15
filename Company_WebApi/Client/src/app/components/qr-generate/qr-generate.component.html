@@ -1,0 +1,33 @@
+<div class="container" *ngIf="formGroup">
+    <form [formGroup]="formGroup" (ngSubmit)="submit()">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="loadDay">Load Day</label>
+                <input type="text" class="form-control" placeholder="Load Day" formControlName="loadDay"
+                    [matAutocomplete]="auto" (keyup)="onKeyup($event, 'loadDay')">
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getAPIData($event.option.value,"loadDay")'>
+                    <mat-option *ngFor="let option of filterLoadDayList" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+            <div class="col-md-4">
+                <label for="nestingno">Nesting Number</label>
+                <input type="text" class="form-control" placeholder="Nesting Number" formControlName="nestingno"
+                    [matAutocomplete]="auto_nest_num" (keyup)="onKeyup($event, 'nestingno')">
+                <mat-autocomplete #auto_nest_num="matAutocomplete"
+                    (optionSelected)='getAPIData($event.option.value,"nestingno")'>
+                    <mat-option *ngFor="let option of filterNestingNoList" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+            <div class="col-md-4">
+                <label>&nbsp;</label>
+                <input type="submit" class="form-control btn btn-primary" value="Generate" />
+            </div>
+
+        </div>
+    </form>
+</div>
+<app-loader *ngIf="showLoader"></app-loader>

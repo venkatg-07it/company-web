@@ -1,0 +1,22 @@
+{
+    "fields": [        
+        "Customer",
+        "Item Code",
+        "Process",
+        "Description",
+        "Revision",
+        "Drawing No",
+        "Live/Retired",
+        "Drawing Projection",
+        "Remarks"
+    ],    
+    "repeatedFields": [        
+        "Dim",
+        "Min",
+        "Max"
+    ],
+    "primary": [
+        {"name": "itemcode", "label": "Item Code"},
+        {"name": "process", "label": "Process"}
+    ]
+}

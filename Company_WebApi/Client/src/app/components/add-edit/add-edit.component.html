@@ -1,0 +1,53 @@
+<container-element [ngSwitch]="routePath">
+    <app-ae-item-master *ngSwitchCase="'item-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-item-master>
+    <app-ae-customer-master *ngSwitchCase="'customer-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-customer-master>
+    <app-ae-component-master *ngSwitchCase="'component-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-component-master>
+    <app-ae-assembly-master *ngSwitchCase="'assembly-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-assembly-master>
+    <app-ae-im-raw-mat-master *ngSwitchCase="'im-raw-materials-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-im-raw-mat-master>
+    <app-ae-price-master *ngSwitchCase="'price-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-price-master>
+    <app-ae-po-master *ngSwitchCase="'po-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-po-master>
+     <app-ae-table-master *ngSwitchCase="'table-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-table-master>
+    <app-ae-po-item-code-match *ngSwitchCase="'po-item-code-match'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-po-item-code-match>
+    <app-ae-bi-master *ngSwitchCase="'batch-or-individual-master'"
+        [jsonLocation]="jsonLocation"
+        [apiUrl]="apiUrl"
+        [pageTitle]="pageTitle"
+    ></app-ae-bi-master>
+    
+</container-element>

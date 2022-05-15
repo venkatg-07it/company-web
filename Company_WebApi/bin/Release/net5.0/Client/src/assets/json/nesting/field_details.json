@@ -1,0 +1,120 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 100,
+        "pinned": "left"
+    },
+    "Load Day":{
+        "label": "Load Day",
+        "name": "planningLoadDay",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 1        
+    },
+    "S1 of RM":{
+        "label": "S1 of RM",
+        "name": "s1ofRm",
+        "width": 200,
+        "group": "nesting",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "RM Code":{
+        "label": "RM Code",
+        "name": "rmcode",
+        "width": 200,
+        "group": "nesting",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 3
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,
+        "group": "nesting",
+        "type": "auto",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },    
+    "PO Type":{
+        "label": "PO Type",
+        "name": "potype",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "disable": true,
+        "required": true,
+        "row": 1,
+        "col": 2
+    },  
+    "BATCH/INDIVIDUAL":{
+        "label": "BATCH/INDIVIDUAL",
+        "name": "batchOrIndividual",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "Material":{
+        "label": "Material",
+        "name": "material",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Nesting Name":{
+        "label": "Nesting Name",
+        "name": "nestingno",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "required": true,
+        "row": 1,
+        "col": 1
+    },
+    "Nesting Qty":{
+        "label": "Nesting Qty",
+        "name": "nestingQty",
+        "width": 200,
+        "group": "nesting",
+        "type": "number",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Process Qty":{
+        "label": "Process Qty",
+        "name": "processQty",
+        "width": 200,
+        "group": "nesting",
+        "type": "number",
+        "required": true,
+        "row": 1,
+        "col": 2
+    },
+    "Remaining":{
+        "label": "Remaining",
+        "name": "remaining",
+        "width": 200,
+        "group": "nesting",
+        "type": "text",
+        "disable": true,
+        "row": 1,
+        "col": 2
+    }    
+}

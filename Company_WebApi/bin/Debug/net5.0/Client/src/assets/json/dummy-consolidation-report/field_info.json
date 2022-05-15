@@ -1,0 +1,96 @@
+{
+    "load-day": {
+        "fields": [
+            "S.No.",            
+            "Item Code",
+            "Item Description",
+            "Required Qty"            
+        ]
+    },    
+    "component-list": {
+        "fields": [
+            "Item Code",
+            "Item Description",
+            "RM Code",
+            "RM Description",
+            "Level Code 1",
+            "Level Code 2",
+            "Size 1",
+            "Size 2",
+            "Size 3",
+            "Qty",
+            "Process 1",
+            "Process 2",
+            "Process 3",
+            "Process 4",
+            "Process 5",
+            "Process 6",
+            "Process 7",
+            "Process 8",
+            "Process 9",
+            "Process 10",
+            "Process 11",
+            "Process 12",
+            "Process 13",
+            "Process 14",
+            "Process 15",
+            "FINISH TYPE",
+            "SURFACE PREPARATION",
+            "PRIME COLOUR",
+            "PRIME DFT",
+            "IMO COLOUR",
+            "IMO DFT",
+            "TOP COAT COLOUR",
+            "TOP COAT DFT",
+            "REMARKS"   
+        ]
+    },
+    "raw-materials": {
+        "fields": [
+            "RM Code",
+            "RM Description",           
+            "Size 1",
+            "Size 2",
+            "Size 3",
+            "Table",
+            "Scrap %",
+            "Qty",
+            "SUOM",
+            "SIZE 2 * SIZE 3/1000000 FOR TABLE 1 or SIZE 3/1000 FOR OTHER TABLE",
+            "ADD 12%",
+            "TOTAL",
+            "TOTAL*QTY",
+            "RM S2",
+            "RM S3",
+            "Sq-m for Table 1 m for Table 2",
+            "Table 1: NO. OF SHEETS REQUIRED in no.s, Table 2:LENGH REQUIRED in m"
+        ]
+    },
+    "store-table-1": {
+        "fields": [
+            "RM Code",
+            "RM Description",            
+            "Size 1",
+            "Size 2",
+            "Size 3",
+            "Table",
+            "NO. OF SHEETS REQUIRED in no.s",
+            "NO. OF SHEETS REQUIRED in no.s as per Nesting",
+            "NO.OF SHEETS ISSUED",
+            "REMARKS"
+        ]
+    },
+    "store-table-2": {
+        "fields": [
+            "RM Code",
+            "RM Description",            
+            "Size 1",
+            "Size 2",
+            "Size 3",
+            "Table",
+            "LENGH REQUIRED in m",            
+            "Actual Length Required in m",
+            "REMARKS"
+        ]
+    }    
+}

@@ -1,0 +1,90 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemCode",
+        "width": 200,
+        "required": true,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "Description":{
+        "label": "Description",
+        "name": "description",
+        "width": 200,
+        "required": true,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "RM Code": {
+        "label": "RM Code",
+        "name": "rmcode",
+        "width": 200,
+        "required": true,
+        "length": 27,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "RM Description": {
+        "label": "RM Description",
+        "name": "rmdescription",
+        "width": 200,
+        "required": true,
+        "length": 100,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "Size-1": {
+        "label": "Size-1",
+        "name": "size1",
+        "width": 200,
+        "required": true,
+        "length": 20,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "Size-2": {
+        "label": "Size-2",
+        "name": "size2",
+        "width": 200,        
+        "length": 27,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 3,
+        "col": 2
+    },
+    "Size-3": {
+        "label": "Size-3",
+        "name": "size3",
+        "width": 200,        
+        "length": 27,
+        "group": "componentMaster",
+        "type": "text",
+        "row": 4,
+        "col": 1
+    },
+    "Remarks": {
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 200,        
+        "group": "componentMaster",
+        "type": "text",
+        "row": 4,
+        "col": 2
+    }
+}

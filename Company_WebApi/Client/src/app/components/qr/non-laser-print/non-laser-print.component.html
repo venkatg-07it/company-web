@@ -1,0 +1,80 @@
+<div class="container">    
+    <div class="col-md-9 mx-auto headerForm">
+
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group" style="width: 30%">
+                <input type="text" class="form-control" (dateSelect)="onDateSelect($event)" placeholder="dd-mmm-yyyy"
+                    name="dp" ngbDatepicker #d="ngbDatepicker" [value]="model">
+                <div class="input-group-append">
+                    <button id="calender-icon" class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                        type="button">📅</button>
+                </div>
+
+            </div>
+            <div class="form-group" *ngIf="loadDayDDList.length > 0" style="width: 7%;margin-left: 2%">
+                <select class="form-control" [(ngModel)]="loadDayDropDown">
+                    <option *ngFor="let option of loadDayDDList">
+                        {{option}}
+                    </option>
+
+                </select>
+            </div>
+            <div class="fomr-group" style="width: 15%;margin-left:3%">
+                <button class="btn btn-primary form-control" (click)="loadForm()">Load</button>
+            </div>
+          
+        </div>
+    </div>
+    <div class="col-md-9 mx-auto alert alert-success top-2-percent" *ngIf="success">
+        <strong>Success! </strong>Data added successfully!
+    </div>
+    <div class="col-md-9 mx-auto alert alert-danger top-2-percent" *ngIf="error">
+        <strong>Error! </strong>{{errMsg}}
+    </div>
+    <div class="d-flex" *ngIf="filterData.length > 0">
+        <div class="p-2 flex-grow-1 form-group">        
+        </div>
+        <div class="p-2">
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Search" (keyup)="onSearch()" [(ngModel)]="searchText">
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <ag-grid-angular
+            style="width: 98%; height: 500px;margin-left:1%;"
+            class="ag-theme-alpine"
+            [rowData]="filterData"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [pagination]="true"
+            [paginationPageSize]="10"
+            (gridReady)="onGridReady($event)"
+            [frameworkComponents]="frameworkComponents"
+            *ngIf="filterData.length > 0"
+        >
+        </ag-grid-angular>
+        
+    </div>
+
+    <div class="d-flex" *ngIf="filterData.length > 0">
+        <div class="p-2 flex-grow-1 form-group">        
+        </div>
+        <div class="p-2">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="print()">Print</button>
+            </div>
+        </div>        
+    </div>
+    
+
+
+    
+
+
+
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>

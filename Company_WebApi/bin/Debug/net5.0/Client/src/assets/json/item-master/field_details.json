@@ -1,0 +1,683 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Customer Name":{
+        "label": "Customer Name",
+        "name": "customername",
+        "width": 200,
+        "group": "itemMaster",
+        "pinned": "left",
+        "required": true,
+        "length": 50,
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "Customer Code":{
+        "label": "Customer Code",
+        "name": "customercode",
+        "width": 200,
+        "group": "itemMaster",
+        "required": true,
+        "length": 7,
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,
+        "group": "itemMaster",
+        "required": true,
+        "length": 75,
+        "type": "text",
+        "row": 1,
+        "col": 3,
+        "isPrimary": true
+    },
+    "Description":{
+        "label": "Description",
+        "name": "description",
+        "width": 200,
+        "group": "itemMaster",
+        "required": true,
+        "length": 50,
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "Reference Standard": {
+        "label": "Reference Standard",
+        "name": "referencestandard",
+        "width": 200,
+        "group": "itemMaster",
+        "length": 27,
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "Equivalent S Item Code": {
+        "label": "Equivalent S Item Code",
+        "name": "equivalentsamrajitemcode",
+        "width": 200,
+        "group": "itemMaster",
+        "length": 75,
+        "type": "text",
+        "row": 2,
+        "col": 3
+    },
+    "Live/Retired": {
+        "label": "Live/Retired",
+        "name": "liveorretired",
+        "width": 200,
+        "group": "itemMaster",
+        "required": true,
+        "length": 1,
+        "type": "text",
+        "row": 3,
+        "col": 1
+    },
+    "Revision Level":{
+        "label": "Revision Level",
+        "name": "revisionlevel",
+        "width": 200,
+        "group": "itemMaster",
+        "required": true,
+        "row": 3,
+        "type": "text",
+        "col": 2
+    },
+    "UOM":{
+        "label": "UOM",
+        "name": "uom",
+        "width": 100,
+        "group": "itemMaster",
+        "required": true,
+        "type": "number",
+        "row": 3,
+        "col": 3
+    },
+    "SUOM":{
+        "label": "SUOM",
+        "name": "suom",
+        "width": 100,
+        "group": "itemMaster",
+        "required": true,
+        "type": "number",
+        "row": 4,
+        "col": 1
+    },
+    "LC-1":{
+        "label": "LC-1",
+        "name": "lc1",
+        "width": 100,
+        "group": "itemMaster",
+        "required": true,
+        "type": "number",
+        "row": 4,
+        "col": 2
+    },
+    "LC-2":{
+        "label": "LC-2",
+        "name": "lc2",
+        "width": 100,
+        "group": "itemMaster",
+        "required": true,
+        "type": "text",
+        "length": 1,
+        "row": 4,
+        "col": 3
+    },
+    "Process Revision Level":{
+        "label": "Process Revision Level",
+        "name": "processrevisionlevel",
+        "width": 100,
+        "group": "itemMaster",
+        "required": true,
+        "type": "text",
+        "row": 5,
+        "col": 1
+    },
+    "Process-1":{
+        "label": "Process-1",
+        "name": "process1",
+        "width": 150,
+        "group": "itemMaster",
+        "required": true,
+        "type": "text",
+        "row": 5,
+        "col": 2
+    },
+    "Machine-1":{
+        "label": "Machine-1",
+        "name": "machine1",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 5,
+        "col": 3,
+        "hide": true
+    },
+    
+    "Process-2":{
+        "label": "Process-2",
+        "name": "process2",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 6,
+        "col": 1
+    },
+    "Machine-2":{
+        "label": "Machine-2",
+        "name": "machine2",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 6,
+        "col": 2,
+        "hide": true
+    },
+    "Process-3":{
+        "label": "Process-3",
+        "name": "process3",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 6,
+        "col": 3
+    },
+    "Machine-3":{
+        "label": "Machine-3",
+        "name": "machine3",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 7,
+        "col": 1,
+        "hide": true
+    },
+    "Process-4":{
+        "label": "Process-4",
+        "name": "process4",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 7,
+        "col": 2
+    },
+    "Machine-4":{
+        "label": "Machine-4",
+        "name": "machine4",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 7,
+        "col": 3,
+        "hide": true
+    },
+    "Process-5":{
+        "label": "Process-5",
+        "name": "process5",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 8,
+        "col": 1
+    },
+    "Machine-5":{
+        "label": "Machine-5",
+        "name": "machine5",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 8,
+        "col": 2,
+        "hide": true
+    },
+    "Process-6":{
+        "label": "Process-6",
+        "name": "process6",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 8,
+        "col": 3
+    },
+    "Machine-6":{
+        "label": "Machine-6",
+        "name": "machine6",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 9,
+        "col": 1,
+        "hide": true
+    },
+    "Process-7":{
+        "label": "Process-7",
+        "name": "process7",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 9,
+        "col": 2
+    },
+    "Machine-7":{
+        "label": "Machine-7",
+        "name": "machine7",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 9,
+        "col": 3,
+        "hide": true
+    },
+    "Process-8":{
+        "label": "Process-8",
+        "name": "process8",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 10,
+        "col": 1
+    },
+    "Machine-8":{
+        "label": "Machine-8",
+        "name": "machine8",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 10,
+        "col": 2,
+        "hide": true
+    },
+    "Process-9":{
+        "label": "Process-9",
+        "name": "process9",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 10,
+        "col": 3
+    },
+    "Machine-9":{
+        "label": "Machine-9",
+        "name": "machine9",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 11,
+        "col": 1,
+        "hide": true
+    },
+    "Process-10":{
+        "label": "Process-10",
+        "name": "process10",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 11,
+        "col": 2
+    },
+    "Machine-10":{
+        "label": "Machine-10",
+        "name": "machine10",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 11,
+        "col": 3,
+        "hide": true
+    },
+    "Process-11":{
+        "label": "Process-11",
+        "name": "process11",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 12,
+        "col": 1
+    },
+    "Machine-11":{
+        "label": "Machine-11",
+        "name": "machine11",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 12,
+        "col": 2,
+        "hide": true
+    },
+    "Process-12":{
+        "label": "Process-12",
+        "name": "process12",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 12,
+        "col": 3
+    },
+    "Machine-12":{
+        "label": "Machine-12",
+        "name": "machine12",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 13,
+        "col": 1,
+        "hide": true
+    },
+    "Process-13":{
+        "label": "Process-13",
+        "name": "process13",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 13,
+        "col": 2
+    },
+    "Machine-13":{
+        "label": "Machine-13",
+        "name": "machine13",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 13,
+        "col": 3,
+        "hide": true
+    },
+    "Process-14":{
+        "label": "Process-14",
+        "name": "process14",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 14,
+        "col": 1
+    },
+    "Machine-14":{
+        "label": "Machine-14",
+        "name": "machine14",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 14,
+        "col": 2,
+        "hide": true
+    },
+    "Process-15":{
+        "label": "Process-15",
+        "name": "process15",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 14,
+        "col": 3
+    },
+    "Machine-15":{
+        "label": "Machine-15",
+        "name": "machine15",
+        "width": 150,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 15,
+        "col": 1,
+        "hide": true
+    },
+    "Finish Type":{
+        "label": "Finish Type",
+        "name": "finishtype",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 15,
+        "col": 2
+    },
+    "Surface Preparation":{
+        "label": "Surface Preparation",
+        "name": "surfacepreparation",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 15,
+        "col": 3
+        
+    },
+    "Primer Colour":{
+        "label": "Primer Colour",
+        "name": "primercolour",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 16,
+        "col": 1
+    },
+    "Primer DFT":{
+        "label": "Primer DFT",
+        "name": "primerDft",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 16,
+        "col": 2
+    },
+    "IMO Colour":{
+        "label": "IMO Colour",
+        "name": "imocolour",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 16,
+        "col": 3
+    },
+    "IMO DFT":{
+        "label": "IMO DFT",
+        "name": "imodft",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 17,
+        "col": 1
+    },
+    "Top Coat Colour":{
+        "label": "Top Coat Colour",
+        "name": "topCoatColour",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 17,
+        "col": 2
+    },
+    "Top Coat DFT":{
+        "label": "Top Coat DFT",
+        "name": "topCoatDft",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 17,
+        "col": 3
+    },
+    "Special Finish Details":{
+        "label": "Special Finish Details",
+        "name": "specialFinishdetails",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 18,
+        "col": 1
+    },
+    "QUALITY FLAG for Laser/TPP":{
+        "label": "QUALITY FLAG for Laser/TPP",
+        "name": "qualityFlagforLaserOrTpp",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "length": 1,
+        "row": 18,
+        "col": 2
+    },
+    "Inspection Criteria for Laser/TPP":{
+        "label": "Inspection Criteria for Laser/TPP",
+        "name": "inspectionCriteriaforLaserOrTpp",
+        "width": 20,
+        "group": "itemMaster",
+        "type": "dropdown",
+        "values": ["","All", "Batch Qty", "Green channel"],
+        "default": "",
+        "row": 18,
+        "col": 3
+    },
+    "Qty to be Inspected for Laser/TPP":{
+        "label": "Qty to be Inspected for Laser/TPP",
+        "name": "qtytobeInspectedforLaserOrTpp",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 19,
+        "col": 1
+    },
+    "QUALITY FLAG for Other than Laser/TPP":{
+        "label": "QUALITY FLAG for Other than Laser/TPP",
+        "name": "qualityFlagforOtherthanLaserOrTpp",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "length": 1,
+        "row": 19,
+        "col": 2
+    },
+    "Inspection Criteria for Other than Laser/TPP":{
+        "label": "Inspection Criteria for Other than Laser/TPP",
+        "name": "inspectionCriteriaforOtherthanLaserOrTpp",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "dropdown",
+        "values": ["","All", "Batch Qty", "Green channel"],
+        "default": "",
+        "row": 19,
+        "col": 3
+    },
+    "Qty to be Inspected for Other than Laser/TPP":{
+        "label": "Qty to be Inspected for Other than Laser/TPP",
+        "name": "qtytobeInspectedforOtherthanLaserOrTpp",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 20,
+        "col": 1
+    },
+    "Image 1":{
+        "label": "Image 1",
+        "name": "image1",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 20,
+        "col": 2
+    },
+    "Image 2":{
+        "label": "Image 2",
+        "name": "image2",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 20,
+        "col": 3
+    },
+    "Remarks":{
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 21,
+        "col": 1
+    },
+    "Group Code":{
+        "label": "Group Code",
+        "name": "groupCode",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 21,
+        "col": 2
+    },
+    "Inventory Code":{
+        "label": "Inventory Code",
+        "name": "inventorycode",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 21,
+        "col": 3
+    },
+    "Handling Person-1":{
+        "label": "Handling Person-1",
+        "name": "handlingPerson1",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 22,
+        "col": 1
+    },
+    "Handling Person-2":{
+        "label": "Handling Person-2",
+        "name": "handlingPerson2",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 22,
+        "col": 2
+    },
+    "CLASSIFICATION CODE":{
+        "label": "CLASSIFICATION CODE",
+        "name": "classificationCode",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 22,
+        "col": 3
+    },
+    "Item Classification (2)":{
+        "label": "Item Classification (2)",
+        "name": "itemClassification",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 23,
+        "col": 1
+    },
+    "Location of origin (2)":{
+        "label": "Location of origin (2)",
+        "name": "locationoforigin",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 23,
+        "col": 2
+    },
+    "Engineering issue level (2)":{
+        "label": "Engineering issue level (2)",
+        "name": "engineeringissuelevel",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 23,
+        "col": 3
+    },
+    "Raw material Specifications(2)":{
+        "label": "Raw material Specifications(2)",
+        "name": "rawmaterialSpecifications",
+        "width": 100,
+        "group": "itemMaster",
+        "type": "text",
+        "row": 23,
+        "col": 4
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {"name": "Demo|GRN Master", "link":"grn-master", "order": 1},
+    {"name": "Demo|Location Master", "link":"location-master", "order": 1},
+    {"name": "Demo|Add GRN", "link":"add-grn", "order": 1},
+    {"name": "Demo|Add Location", "link":"add-loc", "order": 1},
+    {"name": "Demo|QR Print GRN", "link":"qr-print-grn", "order": 1},
+    {"name": "Demo|QR Print Location", "link":"qr-print-loc", "order": 1},
+    {"name": "Demo|Load GRN", "link":"load-grn", "order": 1}
+]

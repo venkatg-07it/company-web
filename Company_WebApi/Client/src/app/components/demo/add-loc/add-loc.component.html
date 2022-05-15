@@ -1,0 +1,23 @@
+<div class="container">    
+    <div class="col-md-9 mx-auto headerForm">
+
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group">
+                <label>Location Number</label>
+                <input type="text" class="form-control" [(ngModel)]="locNum" placeholder="Location Number">
+                
+
+            </div>
+            <div class="form-group" style="margin-left:20px">
+                <label>Location Desc</label>
+                <input type="text" class="form-control" [(ngModel)]="locDesc" placeholder="Location Desc">
+            </div>
+            <div class="fomr-group" style="width: 15%;margin-left:3%">
+                <label>&nbsp;&nbsp;</label>
+                <button class="btn btn-primary form-control" (click)="addLoc()">Submit</button>
+            </div>
+          
+        </div>
+    </div>
+</div>

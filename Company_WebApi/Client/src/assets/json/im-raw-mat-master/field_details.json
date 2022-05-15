@@ -1,0 +1,194 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 70,
+        "pinned": "left"
+    },
+    "Item Code":{
+        "label": "Item Code",
+        "name": "itemcode",
+        "width": 200,
+        "group": "imRawMaterials",
+        "required": true,
+        "length": 75,
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "Description":{
+        "label": "Description",
+        "name": "description",
+        "width": 200,
+        "group": "imRawMaterials",
+        "required": true,
+        "length": 100,
+        "type": "text",
+        "row": 1,
+        "col": 2
+    },
+    "Live/Retired": {
+        "label": "Live/Retired",
+        "name": "liveorretired",
+        "width": 200,
+        "group": "imRawMaterials",
+        "required": true,
+        "length": 1,
+        "type": "text",
+        "row": 1,
+        "col": 3
+    },
+    "Size-1": {
+        "label": "Size-1",
+        "name": "size1",
+        "width": 200,
+        "required": true,
+        "length": 20,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 2,
+        "col": 1
+    },
+    "Size-2": {
+        "label": "Size-2",
+        "name": "size2",
+        "width": 200,
+        "required": true,
+        "length": 27,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 2,
+        "col": 2
+    },
+    "Size-3": {
+        "label": "Size-3",
+        "name": "size3",
+        "width": 200,
+        "required": true,
+        "length": 27,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 2,
+        "col": 3
+    },
+    "Table":{
+        "label": "Table",
+        "name": "tables",
+        "width": 200,
+        "group": "imRawMaterials",
+        "required": true,
+        "row": 3,
+        "type": "number",
+        "col": 1
+    },
+    "Remarks":{
+        "label": "Remarks",
+        "name": "remarks",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 3,
+        "col": 2
+    },
+    "UOM":{
+        "label": "UOM",
+        "name": "uom",
+        "width": 100,
+        "group": "imRawMaterials",
+        "required": true,
+        "type": "text",
+        "row": 3,
+        "col": 3
+    },
+    "SUOM":{
+        "label": "SUOM",
+        "name": "suom",
+        "width": 100,
+        "group": "imRawMaterials",
+        "required": true,
+        "type": "text",
+        "row": 4,
+        "col": 1
+    },
+    "Group Code":{
+        "label": "Group Code",
+        "name": "groupCode",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 4,
+        "col": 2
+    },
+    "Inventory Code":{
+        "label": "Inventory Code",
+        "name": "inventorycode",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 4,
+        "col": 3
+    },
+    "Handling Person-1":{
+        "label": "Handling Person-1",
+        "name": "handlingPerson1",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 5,
+        "col": 1
+    },
+    "Handling Person-2":{
+        "label": "Handling Person-2",
+        "name": "handlingPerson2",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 5,
+        "col": 2
+    },
+    "CLASSIFICATION CODE":{
+        "label": "CLASSIFICATION CODE",
+        "name": "classificationCode",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 5,
+        "col": 3
+    },
+    "Item Classification (2)":{
+        "label": "Item Classification (2)",
+        "name": "itemClassification",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 6,
+        "col": 1
+    },
+    "Location of origin (2)":{
+        "label": "Location of origin (2)",
+        "name": "locationoforigin",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 6,
+        "col": 2
+    },
+    "Engineering issue level (2)":{
+        "label": "Engineering issue level (2)",
+        "name": "engineeringissuelevel",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 6,
+        "col": 3
+    },
+    "Raw material Specifications(2)":{
+        "label": "Raw material Specifications(2)",
+        "name": "rawmaterialSpecifications",
+        "width": 100,
+        "group": "imRawMaterials",
+        "type": "text",
+        "row": 6,
+        "col": 4
+    }
+}

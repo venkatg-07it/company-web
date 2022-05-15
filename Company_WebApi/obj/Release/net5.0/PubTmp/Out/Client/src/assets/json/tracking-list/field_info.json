@@ -1,0 +1,42 @@
+{
+    "fields": [
+        "S.No.",
+        "Item Code",
+        "Item Description",
+        "Level Code 1",
+        "Level Code 2",
+        "Qty",
+        "Process 1",
+        "Process 2",
+        "Process 3",
+        "Process 4",
+        "Process 5",
+        "Process 6",
+        "Process 7",
+        "Process 8",
+        "Process 9",
+        "Process 10",
+        "Process 11",
+        "Process 12",
+        "Process 13",
+        "Process 14",
+        "Process 15"
+    ],
+    "groups": [
+        "trackingList"
+    ],
+    "primary": [
+        {
+            "name": "itemcode",
+            "label": "Item Code"
+        },
+        {
+            "name": "assemblyNumber",
+            "label": "Assembly No."
+        },
+        {
+            "name": "qty",
+            "label": "Qty"
+        }
+    ]
+}

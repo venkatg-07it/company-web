@@ -1,0 +1,26 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 100,
+        "pinned": "left"
+    },
+    "Table":{
+        "label": "Table",
+        "name": "tableType",
+        "width": 600,
+        "group": "tableMaster",
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "Scrap %":{
+        "label": "Scrap %",
+        "name": "scrapPercent",
+        "width": 600,
+        "group": "tableMaster",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    }    
+}

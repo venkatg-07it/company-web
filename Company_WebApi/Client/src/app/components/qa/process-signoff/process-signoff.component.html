@@ -1,0 +1,102 @@
+<div class="container">
+    <h2>Process Sign Off</h2>
+    <div class="col-md-9 mx-auto">
+        <div class="alert" [ngClass]="{'alert-success': type=='success', 'alert-danger': type=='fail'}" *ngIf="showAlert">
+            <strong>{{alertTitle}}</strong> {{alertMsg}}
+        </div>
+        <div class="row d-flex justify-content-center">            
+            <div class="form-group col-md-12">
+                <input type="text" class="form-control" placeholder="Place Cursor" (change)="scanQR($event)" />
+            </div>
+        </div>
+    </div>
+    <form class="col-md-9 mx-auto headerForm" [formGroup]="formGroup" (ngSubmit)="signOff()"
+        *ngIf="formGroup && showForm">
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group col-md-6">
+                <label for="loadday">Load Day</label>
+                <input type="text" class="form-control" id="loadday" [readonly]="true" formControlName="loadday">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="itemcode">Item Code</label>
+                <input type="text" class="form-control" id="itemcode" [readonly]="true" formControlName="itemcode">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group col-md-6">
+                <label for="totalqty">Total Quantity</label>
+                <input type="text" class="form-control" id="totalqty" [readonly]="true" formControlName="totalqty">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="receivedqty">Received Quantity - Max - ({{maxQty}})</label>
+                <input type="text" class="form-control" id="receivedqty" placeholder="Received Qty"
+                    formControlName="receivedqty">
+
+                    <div *ngIf="formGroup.get('receivedqty')?.invalid && (formGroup.get('receivedqty')?.dirty || formGroup.get('receivedqty')?.touched)" class="danger">
+                    
+                        <div *ngIf="formGroup.get('receivedqty')?.errors?.required" class="form-error-field">
+                            Required
+                        </div>                   
+                    </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group col-md-6">
+                <label for="handoverProcessFrom">Handover From</label>
+                <select class="form-control" id="handoverProcessFrom" formControlName="handoverProcessFrom"
+                    name="process">                    
+                    <option *ngFor="let option of processList" [value]="option">{{option}}</option>
+                </select>
+                <div *ngIf="formGroup.get('handoverProcessFrom')?.invalid && (formGroup.get('handoverProcessFrom')?.dirty || formGroup.get('handoverProcessFrom')?.touched)" class="danger">
+                    
+                    <div *ngIf="formGroup.get('handoverProcessFrom')?.errors?.required" class="form-error-field">
+                        Required
+                    </div>                   
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="handoverProcessTo">Handover To</label>
+
+                <select class="form-control" id="handoverProcessTo" formControlName="handoverProcessTo" name="process">                    
+                    <option *ngFor="let option of processList" [value]="option">{{option}}</option>
+                </select>
+
+                <div *ngIf="formGroup.get('handoverProcessTo')?.invalid && (formGroup.get('handoverProcessTo')?.dirty || formGroup.get('handoverProcessTo')?.touched)" class="danger">
+                    
+                    <div *ngIf="formGroup.get('handoverProcessTo')?.errors?.required" class="form-error-field">
+                        Required
+                    </div>                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="form-group col-md-6">
+                <label for="acceptorname">Acceptor Name</label>
+                <input type="text" class="form-control" id="acceptorname" [readonly]="true"
+                    formControlName="acceptorname">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="signeddate">Signed Date</label>
+                <input type="text" class="form-control" id="signeddate" [readonly]="true" formControlName="signeddate">
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="p-2 flex-grow-1 form-group">
+            </div>
+
+            <div class="p-2">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Sign Off" [disabled]="!formGroup.valid || disableSubmit" />
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<app-loader *ngIf="showLoader"></app-loader>
