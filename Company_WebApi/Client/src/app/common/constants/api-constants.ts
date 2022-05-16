@@ -1,10 +1,10 @@
 export class APIConstants {
     
     
-    public static HOST_NAME: string = "http://192.168.29.88:5000";
+    //public static HOST_NAME: string = "http://192.168.29.75:5000";
     //public static HOST_NAME: string = "http://localhost:7007";
     //public static HOST_NAME: string = "http://192.168.0.171:5000";
-    //public static HOST_NAME: string = "";
+    public static HOST_NAME: string = "";
     public static LOGIN: string = APIConstants.HOST_NAME + "/login";
 
     public static ITEM_MASTER_UPLOAD: string = APIConstants.HOST_NAME + "/api/ItemMaster";

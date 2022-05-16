@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project>
   <PropertyGroup>
-    <_PublishTargetUrl>D:\project\1-new\company-pub</_PublishTargetUrl>
-    <History>True|2022-05-15T14:12:55.8168615Z;</History>
+    <_PublishTargetUrl>D:\Project\Industry-Poc\iis</_PublishTargetUrl>
+    <History>True|2022-05-16T14:05:25.5447584Z;True|2022-05-16T19:34:17.9500150+05:30;False|2022-05-16T19:33:05.2880797+05:30;True|2022-05-16T19:32:04.2363693+05:30;True|2022-05-16T18:04:40.3876233+05:30;</History>
   </PropertyGroup>
 </Project>

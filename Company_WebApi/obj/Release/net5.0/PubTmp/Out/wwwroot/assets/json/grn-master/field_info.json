@@ -1,0 +1,21 @@
+{
+    "fields": [
+        "S.No.",
+        "GRN Date",
+        "PO/MO Number",
+        "Vendor Name",
+        "Part Number",
+        "Part Desc.",
+        "Recv. Qty",
+        "Location"
+    ],
+    "groups": [
+        "assemblyMaster"
+    ],
+    "primary": [
+        {"name": "grndate", "label": "GRN Date"},
+        {"name": "poorMonumber", "label": "PO/MO Number"},
+        {"name": "vendorname", "label": "Vendor Name"},
+        {"name": "partnumber", "label": "Part Number"}
+    ]
+}

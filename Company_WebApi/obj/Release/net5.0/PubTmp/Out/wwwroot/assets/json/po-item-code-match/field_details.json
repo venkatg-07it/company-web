@@ -1,0 +1,26 @@
+{
+    "S.No.": {
+        "label": "S.No.",
+        "name": "sNo",
+        "width": 100,
+        "pinned": "left"
+    },
+    "PO ITEM CODE":{
+        "label": "PO ITEM CODE",
+        "name": "poitemcode",
+        "width": 600,
+        "group": "poItemCodeMatch",
+        "type": "text",
+        "row": 1,
+        "col": 1
+    },
+    "LOADING ITEM CODE":{
+        "label": "LOADING ITEM CODE",
+        "name": "itemcodeforLoading",
+        "width": 600,
+        "group": "poItemCodeMatch",
+        "type": "text",
+        "row": 1,
+        "col": 2
+    }    
+}

@@ -29,6 +29,10 @@ export class LoadGrnComponent implements OnInit {
   grnQR: string = "";
   private gridApi: any;
   private gridColumnApi: any;
+  type: string = "success";
+  alertTitle: string = "Success..!";
+  alertMsg: string = "";
+  showAlert: boolean = false;
 
   constructor(private utilService: UtilService, private apiService: ApiService) { }
 
@@ -166,10 +170,26 @@ export class LoadGrnComponent implements OnInit {
   }
 
   addLoc() {
+    this.showLoader = true;
     this.apiService.putData(APIConstants.GRN_MASTER, this.gridDataList)
     .subscribe((response) => {
       console.log("success", response);
-    })
+      this.type = "success";
+      this.alertTitle = "Success..!";
+      this.alertMsg = "Data stored successfully..!";
+      this.gridDataList = [];
+      this.filterData = [];
+      this.showLoader = false;
+      this.showAlert = true;
+    }, err => {
+      this.type = "success";
+      this.alertTitle = "Success..!";
+      this.alertMsg = "Data stored successfully..!";
+      this.gridDataList = [];
+      this.filterData = [];
+      this.showLoader = false;
+      this.showAlert = true;
+    });
   }
 
 }

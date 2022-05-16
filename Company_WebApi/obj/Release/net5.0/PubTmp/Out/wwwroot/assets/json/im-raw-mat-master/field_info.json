@@ -1,0 +1,30 @@
+{
+    "fields": [
+        "S.No.",
+        "Item Code",
+        "Description",
+        "Live/Retired",
+        "Size-1",
+        "Size-2",
+        "Size-3",
+        "Table",
+        "Remarks",
+        "UOM",
+        "SUOM",
+        "Group Code",
+        "Inventory Code",
+        "Handling Person-1",
+        "Handling Person-2",
+        "CLASSIFICATION CODE",
+        "Item Classification (2)",
+        "Location of origin (2)",
+        "Engineering issue level (2)",
+        "Raw material Specifications(2)"
+    ],
+    "groups": [
+        "imRawMaterials"
+    ],
+    "primary": [
+        {"name": "itemcode", "label": "Item Code"}
+    ]
+}
